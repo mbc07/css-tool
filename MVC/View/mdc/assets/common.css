@@ -1,0 +1,42 @@
+      :root {
+        --mdc-theme-primary: #4caf50;
+      }
+      
+      .app-toolbar {
+        margin: 0px;
+      }
+      .material-icons {
+        text-decoration: none;
+        cursor: pointer;
+        padding-right: 8px;
+      }
+	  
+	        .mdc-menu-anchor {
+        position: absolute;
+      }
+	  
+	
+    html {
+      height: 100%;
+    }
+
+    /* Stack toolbar and content on top of each other. */
+    .app-body {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      height: 100%;
+    }
+
+    /* Place drawer and main next to each other. */
+    .app-content {
+      display: flex;
+      height: 100%;
+      box-sizing: border-box;
+    }
+
+    .app-main {
+      padding-left: 16px;
+    }

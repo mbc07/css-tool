@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS Tool</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="assets/mdc-base/material-components-web.js" charset="utf-8"></script>
+		<link rel="stylesheet" href="assets/mdc-base/material-components-web.css">
+		<script src="assets/mdc-base/mdc.menu.js" charset="utf-8"></script>
+		<script src="assets/mdc-base/mdc.drawer.js" charset="utf-8"></script>
+		<link rel="stylesheet" href="assets/mdc-base/mdc.toolbar.css">
+		<link rel="stylesheet" href="assets/mdc-base/mdc.drawer.css">
+		<link rel="stylesheet" href="assets/mdc-base/mdc.menu.css">
+		<link rel="stylesheet" href="assets/mdc-base/mdc.list.css">
+		<link rel="stylesheet" href="assets/mdc-icons/material-icons.css">
+		<link rel="stylesheet" href="assets/common.css">
+	
+	</head>
+	
+	<body class="mdc-typography app-body">
+		<header class="mdc-toolbar mdc-toolbar--fixed">
+			<section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+				<span class="mdc-toolbar__title">CSS Tool</span>
+			</section>
+			
+			<section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
+				<a class="material-icons app-toolbar-user-button" aria-label="Download" alt="Download">account_circle</a>
+			</section>
+
+			<div class="mdc-simple-menu mdc-simple-menu--open-from-top-right" style="top: 1em; right: 1em;" tabindex="-1">
+				<ul class="mdc-simple-menu__items mdc-list" role="menu" aria-hidden="true">
+					<li class="mdc-list-item" role="menuitem" tabindex="0"><i class="material-icons">face</i>Fulano Beltrano</li>
+					<li class="mdc-list-divider" role="separator"></li>
+					<li class="mdc-list-item" role="menuitem" tabindex="0">Sair</li>
+					<li class="mdc-list-item" role="menuitem" tabindex="0">Configurações</li>
+				</ul>
+			</div>
+
+			<script src="assets/app-toolbar.js" charset="utf-8"></script>
+		</header>
+
+		<div class="app-content mdc-toolbar-fixed-adjust">
+			<nav class="mdc-permanent-drawer">
+				<div class="mdc-list-group">
+					<nav class="mdc-list">
+						<a class="mdc-list-item mdc-permanent-drawer--selected" href="#">
+							<i class="material-icons mdc-list-item__start-detail" aria-hidden="true">home</i>Home
+						</a>
+
+						<a class="mdc-list-item" href="#">
+							<i class="material-icons mdc-list-item__start-detail" aria-hidden="true">settings</i>Tool
+						</a>
+					</nav>
+
+					<hr class="mdc-list-divider">
+
+					<nav class="mdc-list">
+						<a class="mdc-list-item" href="#">
+							<i class="material-icons mdc-list-item__start-detail" aria-hidden="true">info_outline</i>About
+						</a>
+					</nav>
+				</div>
+			</nav>
+			
+			<main class="app-main">
+				<h1 class="mdc-typography--display1">Home</h1>
+				<p class="mdc-typography--body1">Conteúdo.</p>
+			</main>
+		</div>
+	</body>
+</html>
