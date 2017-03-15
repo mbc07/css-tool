@@ -48,10 +48,10 @@
 		</header>
 
 		<div class="app-content mdc-toolbar-fixed-adjust">
-			<nav class="mdc-permanent-drawer">
+			<nav class="mdc-permanent-drawer" style="width: 620px">
 				<div class="mdc-list-group">
 					<nav class="mdc-list">
-						<a class="mdc-list-item mdc-permanent-drawer--selected" href="#">
+						<a class="mdc-list-item" href="#">
 							<i class="material-icons mdc-list-item__start-detail" aria-hidden="true">home</i>Home
 						</a>
 
@@ -63,7 +63,7 @@
 					<hr class="mdc-list-divider">
 
 					<nav class="mdc-list">
-						<a class="mdc-list-item" href="#">
+						<a class="mdc-list-item mdc-permanent-drawer--selected" href="#">
 							<i class="material-icons mdc-list-item__start-detail" aria-hidden="true">info_outline</i>About
 						</a>
 					</nav>
@@ -71,76 +71,34 @@
 			</nav>
 			
 			<main class="app-main">
-				<h1 class="mdc-typography--display1">Novo usuário</h1>
+				<h1 class="mdc-typography--display1">CSS Auto Generator - Gerador automático CSS</h1>
+				<p class="mdc-typography--body1">
+					Gera uma folha de estilos CSS de acordo com a formatação feita pelo usuário (Ex. Centralizar div, alterar cor de table para Black). 
+				</p>
 				
-				<form action="#" id="user-register">
-					<div>
-						<div class="mdc-form-field">
-							<div class="mdc-textfield" data-mdc-auto-init="MDCTextfield">
-								<input id="nome" type="text" class="mdc-textfield__input" required>
-								<label for="nome" class="mdc-textfield__label">Nome</label>
-							</div>
-						</div>
-
-						<div class="mdc-form-field">
-							<div class="mdc-textfield" data-mdc-auto-init="MDCTextfield">
-								<input id="sobrenome" type="text" class="mdc-textfield__input" required>
-								<label for="sobrenome" class="mdc-textfield__label">Sobrenome</label>
-							</div>
-						</div><br/>
-
-						<div class="mdc-form-field">
-							<div class="mdc-textfield" data-mdc-auto-init="MDCTextfield">
-								<input id="email" type="email" class="mdc-textfield__input" required>
-								<label for="email" class="mdc-textfield__label">E-mail</label>
-							</div>
-						</div>
-
-						<div class="mdc-form-field">
-							<div class="mdc-textfield" data-mdc-auto-init="MDCTextfield">
-								<input id="cemail" type="email" class="mdc-textfield__input" required>
-								<label for="cemail" class="mdc-textfield__label">Confirmar E-mail</label>
-							</div>
-						</div><br/>
-						
-						<div class="mdc-form-field">
-							<div class="mdc-textfield" data-mdc-auto-init="MDCTextfield">
-								<input id="senha" type="password" class="mdc-textfield__input" required pattern=".{8,}" aria-controls="pw-validation-msg">
-								<label for="senha" class="mdc-textfield__label">Senha</label>
-							</div>
-						</div>
-						<div class="mdc-form-field">
-							<div class="mdc-textfield" data-mdc-auto-init="MDCTextfield">
-								<input id="csenha" type="password" class="mdc-textfield__input" required pattern=".{8,}" aria-controls="pw-validation-msg">
-								<label for="csenha" class="mdc-textfield__label">Confirmar Senha</label>
-							</div>
-						</div>
-						
-						<p class="mdc-textfield-helptext mdc-textfield-helptext--persistent mdc-textfield-helptext--validation-msg" id="pw-validation-msg" role="alert">
-							Deve ter no mínimo 8 caracteres
-						</p>
-						
-					</div><br/>
-
-					<button type="submit"
-							class="mdc-button
-								   mdc-button--raised
-								   mdc-button--primary
-								   mdc-ripple-surface"
-							data-mdc-auto-init="MDCRipple">
-					  Enviar
-					</button>
-					
-					<button type="reset"
-							class="mdc-button
-								   mdc-button--raised
-								   mdc-button--secondary
-								   mdc-ripple-surface"
-							data-mdc-auto-init="MDCRipple">
-					  Redefinir
-					</button>
-				</form>
-				<script>window.mdc.autoInit();</script>
+				<p class="mdc-typography--body1">
+					O produto, depois do processo do cadastramento do usuário e login para permissão do uso da ferramenta, tem a funcionalidade de
+				</p>
+					<ul>
+						<li class="mdc-typography--body1">
+							fazer upload do arquivo de HTML, na qual o usuário quer para gerar o CSS;
+						</li>
+						<li class="mdc-typography--body1">
+							oferecer uma “lista” de funções de CSS disponível para ser inserido no arquivo CSS, dependendo da tag;
+						</li>
+						<li>
+							oferecer um pré-visualização do layout do HTML com o CSS, inserido até o momento;
+						</li>
+						<li class="mdc-typography--body1">
+							oferecer índice das tags do HTML upado, para melhorar a navegação das partes modificadas;
+						</li>
+						<li class="mdc-typography--body1">
+							oferecer um botão de confirmação das inserções que irá gerar um arquivo compactado do CSS gerado.
+						</li>
+					</ul>
+				<p class="mdc-typography--body1">
+					As melhorias de processo tem como visão a modularização e otimização das já existentes, isso implica em ferramentas mais eficientes em todas as faces, inclusive no desenvolvimento, onde a gama de API é grande e auxiliadora nas mais distintas tarefas; uma importante parte do desenvolvimento web é a estilização e isso torna a ferramenta de criação CSS em um potencial para novos desenvolvedores ou padronização no desenvolvimento dos designs de estilo das páginas.
+				</p>
 			</main>
 		</div>
 	</body>

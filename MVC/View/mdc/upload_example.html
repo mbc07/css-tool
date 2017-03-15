@@ -51,11 +51,11 @@
 			<nav class="mdc-permanent-drawer">
 				<div class="mdc-list-group">
 					<nav class="mdc-list">
-						<a class="mdc-list-item mdc-permanent-drawer--selected" href="#">
+						<a class="mdc-list-item" href="#">
 							<i class="material-icons mdc-list-item__start-detail" aria-hidden="true">home</i>Home
 						</a>
 
-						<a class="mdc-list-item" href="#">
+						<a class="mdc-list-item mdc-permanent-drawer--selected" href="#">
 							<i class="material-icons mdc-list-item__start-detail" aria-hidden="true">settings</i>Tool
 						</a>
 					</nav>
@@ -71,54 +71,20 @@
 			</nav>
 			
 			<main class="app-main">
-				<h1 class="mdc-typography--display1">Novo usuário</h1>
+				<h1 class="mdc-typography--display1">Upload</h1>
 				
-				<form action="#" id="user-register">
+				<form action="#" id="upload">
 					<div>
 						<div class="mdc-form-field">
-							<div class="mdc-textfield" data-mdc-auto-init="MDCTextfield">
-								<input id="nome" type="text" class="mdc-textfield__input" required>
-								<label for="nome" class="mdc-textfield__label">Nome</label>
-							</div>
-						</div>
-
-						<div class="mdc-form-field">
-							<div class="mdc-textfield" data-mdc-auto-init="MDCTextfield">
-								<input id="sobrenome" type="text" class="mdc-textfield__input" required>
-								<label for="sobrenome" class="mdc-textfield__label">Sobrenome</label>
-							</div>
-						</div><br/>
-
-						<div class="mdc-form-field">
-							<div class="mdc-textfield" data-mdc-auto-init="MDCTextfield">
-								<input id="email" type="email" class="mdc-textfield__input" required>
-								<label for="email" class="mdc-textfield__label">E-mail</label>
-							</div>
-						</div>
-
-						<div class="mdc-form-field">
-							<div class="mdc-textfield" data-mdc-auto-init="MDCTextfield">
-								<input id="cemail" type="email" class="mdc-textfield__input" required>
-								<label for="cemail" class="mdc-textfield__label">Confirmar E-mail</label>
+							<div class="mdc-textfield mdc-textfield--multiline" data-mdc-auto-init="MDCTextfield">
+								<textarea id="html" class="mdc-textfield__input" rows="10" cols="38"></textarea>
+								<label for="html" class="mdc-textfield__label">Insira aqui o código HTML ou faça upload do arquivo</label>
 							</div>
 						</div><br/>
 						
 						<div class="mdc-form-field">
-							<div class="mdc-textfield" data-mdc-auto-init="MDCTextfield">
-								<input id="senha" type="password" class="mdc-textfield__input" required pattern=".{8,}" aria-controls="pw-validation-msg">
-								<label for="senha" class="mdc-textfield__label">Senha</label>
-							</div>
+							<input id="file" type="file">
 						</div>
-						<div class="mdc-form-field">
-							<div class="mdc-textfield" data-mdc-auto-init="MDCTextfield">
-								<input id="csenha" type="password" class="mdc-textfield__input" required pattern=".{8,}" aria-controls="pw-validation-msg">
-								<label for="csenha" class="mdc-textfield__label">Confirmar Senha</label>
-							</div>
-						</div>
-						
-						<p class="mdc-textfield-helptext mdc-textfield-helptext--persistent mdc-textfield-helptext--validation-msg" id="pw-validation-msg" role="alert">
-							Deve ter no mínimo 8 caracteres
-						</p>
 						
 					</div><br/>
 
@@ -129,15 +95,6 @@
 								   mdc-ripple-surface"
 							data-mdc-auto-init="MDCRipple">
 					  Enviar
-					</button>
-					
-					<button type="reset"
-							class="mdc-button
-								   mdc-button--raised
-								   mdc-button--secondary
-								   mdc-ripple-surface"
-							data-mdc-auto-init="MDCRipple">
-					  Redefinir
 					</button>
 				</form>
 				<script>window.mdc.autoInit();</script>
