@@ -18,7 +18,7 @@
  	private $password;
 
 
- 	function __construct($name, $email, password)
+ 	function __construct($name, $email, $password)
  	{
  		$this->$name = $name;
  		$this->$email = $email;
@@ -32,7 +32,7 @@
  	 * @return User - Novo usario.
  	 *
  	*/
- 	private function add($name, $email, password)
+ 	private function add($name, $email, $password)
  	{
  		return new User($name, $email, $password);
  	}

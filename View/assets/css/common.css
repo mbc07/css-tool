@@ -1,42 +1,42 @@
-      :root {
-        --mdc-theme-primary: #4caf50;
-      }
-      
-      .app-toolbar {
-        margin: 0px;
-      }
-      .material-icons {
-        text-decoration: none;
-        cursor: pointer;
-        padding-right: 8px;
-      }
-	  
-	        .mdc-menu-anchor {
-        position: absolute;
-      }
-	  
-	
-    html {
-      height: 100%;
-    }
+/* Ajusta altura mínima da toolbar */
+.app-toolbar {
+    min-height: 48px;
+}
 
-    /* Stack toolbar and content on top of each other. */
-    .app-body {
-      display: flex;
-      flex-direction: column;
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-      height: 100%;
-    }
+/* Altura fixa para a toolbar */
+.app-toolbar > .mdl-layout__header-row {
+    height: 48px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
 
-    /* Place drawer and main next to each other. */
-    .app-content {
-      display: flex;
-      height: 100%;
-      box-sizing: border-box;
-    }
+/* Sobrepõe abas na linha principal da toolbar */
+.app-toolbar > .mdl-layout__tab-bar-container {
+    position: fixed;
+    width: 300px;
+    align-self: flex-end;
+    padding-right: 64px;
+}
 
-    .app-main {
-      padding-left: 16px;
-    }
+/* Ícone de usuário maior */
+#app-account-button > .material-icons {
+    font-size: 32px;
+}
+
+/* Reseta valores definidos no ícone de usuário */
+#app-account-button > i.material-icons {
+    position: initial;
+    top: initial;
+    left: initial;
+    -webkit-transform: initial;
+    transform: initial;
+    line-height: initial;
+    width: initial;
+}
+/* Avatar do usuário na toolbar*/
+#app-account-button > img {
+    vertical-align: top;
+    width: 32px;
+    height: 32px;
+}
+
