@@ -22,7 +22,10 @@ require_once(__DIR__.'/../assets/config.php');
         <link rel="stylesheet" type="text/css" href="assets/css/fonts/roboto/roboto.css">
         <link rel="stylesheet" type="text/css" href="assets/css/mdl/material<?= isMinified('css') ?>">
         <link rel="stylesheet" type="text/css" href="assets/css/common.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/toolbar.css">
         
         <script defer src="assets/js/mdl/material<?= isMinified('js') ?>" charset="UTF-8"></script>
         <script src="assets/js/jquery/<?= JQUERY_VERSION . isMinified('js') ?>" charset="UTF-8"></script>
         <script src="assets/js/common.js" charset="UTF-8"></script>
+        <script src="assets/js/toolbar.js" charset="UTF-8"></script>
+

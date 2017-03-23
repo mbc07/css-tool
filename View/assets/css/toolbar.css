@@ -1,0 +1,125 @@
+/* Ajusta altura mínima da toolbar */
+.app-toolbar {
+    min-height: 48px;
+}
+
+/* Altura fixa para a toolbar */
+.app-toolbar > .mdl-layout__header-row {
+    height: 48px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+/* Sobrepõe abas na linha principal da toolbar */
+.app-toolbar > .mdl-layout__tab-bar-container {
+    position: fixed;
+    width: 300px;
+    align-self: flex-end;
+    padding-right: 64px;
+}
+
+/* Adiciona pequena seta no canto do card de usuário */
+.app-acoount-arrow {
+    position: absolute;
+    pointer-events: none;
+    right: 20px;
+    top: 40px;
+    z-index: 6;
+    font-size: 24px;
+    color: #fff;
+    text-shadow: 0px -3px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Sobrepõe o card do usuário em cima do conteúdo */
+.app-account-card {
+    position: absolute;
+    right: 8px;
+    top: 56px;
+    z-index: 5;
+}
+
+/* Deixa o card do usuário oculto inicialmente */
+#app-acoount-menu {
+    display: none;
+}
+
+/* Permite que o botão de login na toolbar seja clicado */
+#app-account-button {
+    z-index: 4;
+}
+
+/* Ícone de usuário maior */
+#app-account-button > .material-icons {
+    font-size: 32px;
+}
+
+/* Reseta valores definidos no ícone de usuário */
+#app-account-button > i.material-icons {
+    position: initial;
+    top: initial;
+    left: initial;
+    -webkit-transform: initial;
+    transform: initial;
+    line-height: initial;
+    width: initial;
+}
+
+/* Avatar do usuário na toolbar*/
+#app-account-button > img {
+    vertical-align: top;
+    width: 32px;
+    height: 32px;
+}
+
+/* Alinhamento dos botões do card do usuário */
+.app-account-card-left-button {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+}
+.app-account-card-right-button {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+}
+
+/* Alinhamento dos campos do formulário no card do usuário */
+.app-account-card-shared-input-left {
+    width: 45%;
+    position: absolute;
+}
+.app-account-card-shared-input-right {
+    width: 45%;
+    float: right;
+}
+
+/* Espaçador vertical para o card do usuário */
+.app-account-card-spacer {
+    height: 96px;
+}
+.app-account-card-spacer-small {
+    height: 24px;
+}
+
+/* Deixa o formulário de redefinição de senha oculto inicialmente */
+.app-account-card-reset-form {
+    display: none;
+}
+
+/* Previne overflow no card do usuário */
+.app-account-card-user-details {
+    max-width: 200px;
+}
+
+/* Ajuste do avatar no card do usuário */
+#app-account-card-avatar {
+    width: 80px;
+    height: 80px;
+    margin-right: 16px;
+    align-self: baseline;
+}
+
+/* Avatar de usuário circular */
+#app-account-card-avatar > img {
+    border-radius: 50px;
+}
