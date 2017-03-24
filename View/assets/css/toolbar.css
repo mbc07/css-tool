@@ -1,6 +1,7 @@
 /* Ajusta altura mínima da toolbar */
 .app-toolbar {
     min-height: 48px;
+    height: 48px;
 }
 
 /* Altura fixa para a toolbar */

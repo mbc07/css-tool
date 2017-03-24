@@ -14,6 +14,9 @@
 require_once(__DIR__.'/../assets/config.php');
 
 ?> 
+            <link rel="stylesheet" type="text/css" href="assets/css/toolbar.css">
+            <script src="assets/js/toolbar.js" charset="UTF-8"></script>
+            
             <header class="mdl-layout__header app-toolbar">
                 <div class="mdl-layout__header-row">
                     <!-- Title -->
@@ -29,7 +32,7 @@ require_once(__DIR__.'/../assets/config.php');
                     </button>
                 </div>
                 <!-- Tabs -->
-                <nav class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                <nav class="mdl-layout__tab-bar mdl-js-ripple-effect app-toolbar">
                     <a href="#home" class="mdl-layout__tab is-active">Início</a>
                     <a href="#tool" class="mdl-layout__tab">Ferramenta</a>
                     <a href="#about" class="mdl-layout__tab">Sobre</a>

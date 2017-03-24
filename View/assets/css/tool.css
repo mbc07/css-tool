@@ -39,3 +39,21 @@
     right: 10px;
     bottom: 10px;
 }
+
+.app-tool-resume-editing {
+    display: none;
+}
+
+.app-tool-upload-card {
+    height: 330px;
+}
+
+.app-tool-upload-card-text-area {
+    resize: none;
+    width: 100%;
+    height: 100%;
+}
+
+.app-tool-upload-card-spacer {
+    height: 138px;
+}
