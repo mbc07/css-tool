@@ -3,11 +3,8 @@
 require_once(__DIR__.'/../assets/config.php');
 
 ?> 
-                        <link rel="stylesheet" type="text/css" href="assets/css/home.css">
-                        <script src="assets/js/home.js" charset="UTF-8"></script>
-
                         <div class="mdl-grid">
-                            <div class="mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--12-col app-home-main-card">
+                            <div class="mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--12-col app-common-content-card">
                                 <h3>CSS Auto Generator - Gerador automático CSS</h3>
                                 <p>
                                     Gera uma folha de estilos CSS de acordo com a formatação feita pelo usuário (Ex. Centralizar div, alterar cor de table para Black). 

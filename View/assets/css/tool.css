@@ -1,22 +1,17 @@
-.app-tool-preview-card {
+.app-tool-preview-card-container {
     width: 100%;
     height: 100%;
 }
 
 .app-tool-preview-card-inner {
-    margin: 0;
     height: 100%;
+    margin: 0px 0px 56px;
 }
 
 .app-tool-preview-card-bottom {
     position: absolute;
     bottom: 0;
     height: 56px;
-}
-
-.app-tool-preview-card-spacer {
-    height: 64px;
-    width: 100%;
 }
 
 .app-tool-preview-card-element-text {
@@ -30,8 +25,18 @@
 
 .app-tool-preview-iframe {
     background-color: #ffffff;
-    width: 100%;
     height: 100%;
+    border: 0;
+    resize: vertical;
+
+    /*** Ajuste de escala ***
+    -ms-transform: scale(1,1);
+    -ms-transform-origin: 0% 0%;
+    -webkit-transform: scale(1,1);
+    -webkit-transform-origin: 0% 0%;
+    transform: scale(1,1);
+    transform-origin: 0% 0%;
+    */
 }
 
 #app-tool-download-button {

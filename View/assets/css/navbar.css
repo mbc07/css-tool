@@ -1,18 +1,18 @@
-/* Ajusta altura mínima da toolbar */
-.app-toolbar {
+/* Ajusta altura mínima da navbar */
+.app-navbar {
     min-height: 48px;
     height: 48px;
 }
 
-/* Altura fixa para a toolbar */
-.app-toolbar > .mdl-layout__header-row {
+/* Altura fixa para a navbar */
+.app-navbar > .mdl-layout__header-row {
     height: 48px;
     padding-left: 16px;
     padding-right: 16px;
 }
 
-/* Sobrepõe abas na linha principal da toolbar */
-.app-toolbar > .mdl-layout__tab-bar-container {
+/* Sobrepõe abas na linha principal da navbar */
+.app-navbar > .mdl-layout__tab-bar-container {
     position: fixed;
     width: 300px;
     align-self: flex-end;
@@ -44,18 +44,18 @@
     display: none;
 }
 
-/* Permite que o botão de login na toolbar seja clicado */
-#app-account-button {
+/* Permite que o botão de login na navbar seja clicado */
+.app-navbar-account-button {
     z-index: 4;
 }
 
 /* Ícone de usuário maior */
-#app-account-button > .material-icons {
+.app-navbar-account-button > .material-icons {
     font-size: 32px;
 }
 
 /* Reseta valores definidos no ícone de usuário */
-#app-account-button > i.material-icons {
+.app-navbar-account-button > i.material-icons {
     position: initial;
     top: initial;
     left: initial;
@@ -65,8 +65,8 @@
     width: initial;
 }
 
-/* Avatar do usuário na toolbar*/
-#app-account-button > img {
+/* Avatar do usuário na navbar*/
+.app-navbar-account-button > img {
     vertical-align: top;
     width: 32px;
     height: 32px;
@@ -113,7 +113,7 @@
 }
 
 /* Ajuste do avatar no card do usuário */
-#app-account-card-avatar {
+.app-account-card-avatar {
     width: 80px;
     height: 80px;
     margin-right: 16px;
@@ -121,6 +121,6 @@
 }
 
 /* Avatar de usuário circular */
-#app-account-card-avatar > img {
+.app-account-card-avatar > img {
     border-radius: 50px;
 }
