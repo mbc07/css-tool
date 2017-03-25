@@ -41,7 +41,7 @@ class UserFactory extends AbstractFactory {
         $sql = "SELECT * FROM " . $this->nometabela . " Where email ='" . $param . "'";
         try {
             $resultPDO = $this->db->query($sql);
-            $result = $this->queryRowsToListOfObjects($resultPDO, "Aluno");
+            $result = $this->queryRowsToListOfObjects($resultPDO, "User");
         } catch (Exception $exc) {
             echo $exc->getMessage();
             $result = array();
@@ -54,7 +54,7 @@ class UserFactory extends AbstractFactory {
         $sql = "SELECT * FROM " . $this->nometabela;
         try {
             $resultPDO = $this->db->query($sql);
-            $result = $this->queryRowsToListOfObjects($resultPDO, "Contato");
+            $result = $this->queryRowsToListOfObjects($resultPDO, "User");
         } catch (Exception $exc) {
             echo $exc->getMessage();
             $result = null;

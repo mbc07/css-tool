@@ -17,10 +17,10 @@ abstract class AbstractFactory {
 
     protected $db;
 
-    public function AbstractFactory() {
+    function __construct() {
 
         try {
-            $this->db = new PDO("mysql:host=localhost;dbname=csstool, root,");
+            $this->db = new PDO("mysql:host=localhost;dbname=csstool;charset=utf8","root","");
         } catch (PDOException $exception) {
             echo $exception->getMessage();
         } catch (Exception $exception) {

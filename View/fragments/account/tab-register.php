@@ -1,24 +1,24 @@
 <?php ?>
 
-<form action="#">
+<form action="?op=cadastra" method="post">
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label app-account-card-shared-input-left">
-        <input class="mdl-textfield__input" type="text" id="register-nome" >
+        <input class="mdl-textfield__input" type="text" id="register-nome" name="nome">
         <label class="mdl-textfield__label" for="register-nome">Nome</label>
     </div>
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label app-account-card-shared-input-right">
-        <input class="mdl-textfield__input" type="text" id="register-snome" >
+        <input class="mdl-textfield__input" type="text" id="register-snome" name="Snome">
         <label class="mdl-textfield__label" for="register-snome">Sobrenome</label>
     </div>
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <input class="mdl-textfield__input" type="email" id="register-email" >
+        <input class="mdl-textfield__input" type="email" id="register-email" name="email">
         <label class="mdl-textfield__label" for="register-email">E-mail</label>
     </div>
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label app-account-card-shared-input-left">
-        <input class="mdl-textfield__input" type="password" id="register-senha" >
+        <input class="mdl-textfield__input" type="password" id="register-senha" name="senha">
         <label class="mdl-textfield__label" for="register-senha">Senha</label>
     </div>
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label app-account-card-shared-input-right">
-        <input class="mdl-textfield__input" type="password" id="register-csenha" >
+        <input class="mdl-textfield__input" type="password" id="register-csenha" name="senhac">
         <label class="mdl-textfield__label" for="register-csenha">Confirmar Senha</label>
     </div>
 
