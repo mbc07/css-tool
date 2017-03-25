@@ -24,6 +24,18 @@
  		$this->email = $email;
  		$this->password = $password;
  	}
+
+ 	function getNome(){
+        return $this->nome;
+    }
+    
+    function getEmail(){
+        return $this->email;
+    }
+
+    function getSenha(){
+        return $this->password;
+    }
  }
 
 ?>
