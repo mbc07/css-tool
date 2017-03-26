@@ -8,7 +8,7 @@
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <input class="mdl-textfield__input" type="email" id="reset-email" >
         <label class="mdl-textfield__label" for="reset-email">E-mail</label>
-    </div>
+    </div><br/>
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label app-account-card-shared-input-left">
         <input class="mdl-textfield__input" type="password" id="reset-senha" >
         <label class="mdl-textfield__label" for="reset-senha">Nova Senha</label>

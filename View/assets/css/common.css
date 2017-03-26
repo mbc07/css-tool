@@ -1,3 +1,14 @@
 .app-common-content-card {
     padding: 28px;
 }
+
+
+/* Scrollbar customizada */ 
+::-webkit-scrollbar {
+	width: 4px;
+	height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgb(255,110,64);
+}
