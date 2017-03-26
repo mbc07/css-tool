@@ -14,7 +14,11 @@ else
 */
 function constructPage($url)
 {
-	require_once('config.php');
+	
+        echo "<!DOCTYPE html>\n\n";
+        echo "<html>";
+        
+        require_once('config.php');
 	require_once '../View/fragments/head.php';
 	switch($url)
 	{
@@ -23,5 +27,7 @@ function constructPage($url)
 		break;
 
 	}
+        
+        echo "</html>\n";
 }
 ?>

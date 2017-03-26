@@ -10,7 +10,6 @@
  * @link 
  */
 ?>
-
 <header class="mdl-layout__header app-navbar">
     <div class="mdl-layout__header-row">
         <!-- Title -->
