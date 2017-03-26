@@ -41,8 +41,11 @@
 			case 'reset':
 			$controller->reset();
 			break;
-			case 'up':
-			$controller->reset();
+			case 'upFile':
+			$controller->up();
+			break;
+			case 'editFile':
+			$controller->up();
 			break;
 
 		}

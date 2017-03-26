@@ -1,21 +1,16 @@
 <?php
 require_once("../Model/User.class.php");
 require_once("../Model/UserFactory.php");
+require_once("../Model/FileManager.class.php");
 
 
 
 /*
- * Material utilizado para as aulas práticas da disciplinas da Faculdade de
- * Computação da Universidade Federal de Mato Grosso do Sul (FACOM / UFMS).
- * Seu uso é permitido para fins apenas acadêmicos, todavia mantendo a
- * referência de autoria.
- *
- *
- *
+ * 
  * Classe controladora que define gerencia do fluxo da aplicação.
  *
- * @author Jane Eleutério 
- * @version 2.0 - 19/Dez/2016
+ * @author Jonathan
+ * @version 1.0 - 26/Mar/2017
  */
 
 
@@ -32,7 +27,9 @@ class Controller {
         ini_set('display_errors', 1);
     }
 
-
+    /**
+     * Gerencia o formulário de cadastramento."     
+     */
 public function cadastra() {
     if (isset($_POST['submit'])) {
 
@@ -44,26 +41,30 @@ public function cadastra() {
         $sucesso = false;
 
         try {
+            //verifica se a senha  e a senha de confirmação são iguais. Senão verifica se os campos do nome e email estão vazios.
             if ($senha != $senhac) {
              throw new Exception('Erro');
          }elseif ($nome == "" || $email == "") {
             throw new Exception('Erro');
         }
 
+        //realiza a junção do nome e sobrenome em uma única variável.
         $nome.= " ".$snome;
+
+        //realiza a criptografia por hash md5 da senha.
         $senha = md5($senha);
 
-
+        //Cria um novo usuário da classe User
         $usuario = new User($nome,$email,$senha);
 
-                //consulta o e-mail no banco
+        //consulta o e-mail no banco
         $result = $this->factory->buscar($email);
-                // se o resultado for igual a 0 itens, então salva contato
+        // se o resultado for igual a 0 itens, então salva contato
         if (count($result) == 0) {
             $sucesso = $this->factory->salvar($usuario);
         }
 
-
+        //Definindo a mensagem que irá exibir dependendo do $sucesso
         if ($sucesso) {
             $msg = "O contato " . $nome . " (" . $email . ") foi cadastrado com sucesso!";
         } else if (!$sucesso && count($result) > 0) {
@@ -98,7 +99,9 @@ public function lista() {
     require 'View/lista.php';
 }
 
-
+    /**
+     * Lida com a autenticação do usuário."     
+     */
 public function login() {
    
     // Recupera o login 
@@ -125,6 +128,7 @@ public function login() {
         exit;
     } 
 
+    //Realiza a busca do usuário pelo email($login)
     $usuario = $this->factory->buscarL($login);
     // Verificar se a senha codificada com o md5 usado na senha do BD produz a senha do BD 
     if(!strcmp($senha, $usuario->senha))  
@@ -144,6 +148,9 @@ public function login() {
 
 }
 
+    /**
+     * Lida com deslogar do usuário."     
+     */
 public function out() {
     session_start(); 
     session_destroy(); 
@@ -155,6 +162,30 @@ public function reset() {
     session_start(); 
     session_destroy(); 
     echo '<script>location.href="pageController.php?url=index";</script>';
+      
+}
+
+public function editF() {
+    
+      
+}
+
+
+public function up() {
+  
+   $file = new FileManager();
+
+    if(isset($_FILES['fileUpload']))
+   {
+      date_default_timezone_set("Brazil/East"); //Definindo timezone padrão
+ 
+      $ext = strtolower(substr($_FILES['fileUpload']['name'],-4)); //Pegando extensão do arquivo
+      $new_name = $file->generatorHash($_SESSION["id_usuario"]) . ".".$ext; //Definindo um novo nome para o arquivo
+      $dir = '../Model/uploads/'; //Diretório para uploads
+ 
+      move_uploaded_file($_FILES['fileUpload']['tmp_name'], $dir.$new_name); //Fazer upload do arquivo
+      echo '<script>location.href="pageController.php?url=index";</script>';
+   }
       
 }
 
