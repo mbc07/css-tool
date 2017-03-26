@@ -142,8 +142,10 @@ public function login() {
 
     // Usuário não forneceu a senha ou o login 
     if(!$login || !$senha){ 
-        echo "Você deve digitar sua senha e login!"; 
-        exit; 
+         echo '<script> alert("O login fornecido por você é inexistente!");
+        location.href="pageController.php?url=index";
+        </script>';   
+        exit;
     }
 
    
@@ -151,7 +153,9 @@ public function login() {
      $usuario = $this->factory->buscar($login);
     //Verifica se a busca não retornou um usuário na BD
     if (!$usuario) { 
-        echo "O login fornecido por você é inexistente!"; 
+        echo '<script> alert("O login fornecido por você é inexistente!");
+        location.href="pageController.php?url=index";
+        </script>';  
         exit;
     } 
 
@@ -168,10 +172,8 @@ public function login() {
     // Usuario/Senha incorreta
         echo '<script> alert("Senha inválida!");
         location.href="pageController.php?url=index";
-        </script>';
-       
-    
-    exit; 
+        </script>'; 
+        exit;
     } 
 
 }
