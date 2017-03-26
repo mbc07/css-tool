@@ -12,14 +12,14 @@
         <h4>Editor</h4>
         <div class="app-tool-editor-spacer"></div>
 
-        <p id="app-editor-greeting">Para começar, selecione um elemento na lista de seletores.</p>
+        <p id="app-editor-greeting">Para começar, selecione um elemento na lista de seletores, as alterações são aplicadas em tempo real na prévia. Quando estiver satisfeito, clique no botão para fazer o download a folha de estilos customizada.</p>
 
         <div id="app-editor-controls" class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
             <div class="mdl-tabs__tab-bar">
                 <a href="#positioning" class="mdl-tabs__tab is-active">Posição</a>
                 <a href="#dimension" class="mdl-tabs__tab">Dimensões</a>
                 <a href="#background" class="mdl-tabs__tab">Preenchimento</a>
-                <a href="#font" class="mdl-tabs__tab">Fonte</a>
+                <a href="#text" class="mdl-tabs__tab">Texto</a>
             </div>
             <div class="mdl-tabs__panel is-active" id="positioning">
 
@@ -32,8 +32,8 @@
             <div class="mdl-tabs__panel" id="background">
                 <?php include '../View/fragments/tool/tab-editor-background.php'; ?>
             </div>
-            <div class="mdl-tabs__panel" id="font">
-                <?php include '../View/fragments/tool/tab-editor-font.php'; ?>
+            <div class="mdl-tabs__panel" id="text">
+                <?php include '../View/fragments/tool/tab-editor-text.php'; ?>
             </div>
         </div>
     </div>

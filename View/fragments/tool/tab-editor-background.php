@@ -11,8 +11,8 @@
 <p>Repetição</p>
 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="initial_b">
     <input type="radio" id="initial_b" class="mdl-radio__button" name="background-repeat" value="1" checked>
-    <span class="mdl-radio__label">Inicial</span>
-</label>
+    <span class="mdl-radio__label">Não definido</span>
+</label><br/>
 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="repeat">
     <input type="radio" id="repeat" class="mdl-radio__button" name="background-repeat" value="2">
     <span class="mdl-radio__label">Ambos</span>

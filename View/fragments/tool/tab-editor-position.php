@@ -22,8 +22,8 @@
 <p>Posicionamento</p>
 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="initial_p">
     <input type="radio" id="initial_p" class="mdl-radio__button" name="position" value="1" checked>
-    <span class="mdl-radio__label">Inicial</span>
-</label>
+    <span class="mdl-radio__label">Não definido</span>
+</label><br/>
 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="static">
     <input type="radio" id="static" class="mdl-radio__button" name="position" value="2">
     <span class="mdl-radio__label">Estático</span>

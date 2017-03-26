@@ -31,8 +31,8 @@
 <p>Overflow</p>
 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="initial_d">
     <input type="radio" id="initial_d" class="mdl-radio__button" name="overflow" value="1" checked>
-    <span class="mdl-radio__label">Inicial</span>
-</label>
+    <span class="mdl-radio__label">Não definido</span>
+</label><br/>
 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="visible">
     <input type="radio" id="visible" class="mdl-radio__button" name="overflow" value="2">
     <span class="mdl-radio__label">Visível</span>
