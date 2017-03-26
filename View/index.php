@@ -20,7 +20,7 @@
                     if(!isset($_SESSION["id_usuario"]) || !isset($_SESSION["nome_usuario"])) 
                     { 
                     //Usuário não logado
-                        echo "<h2> USO RESTRITO PARA USUÁRIOS CADASTRADOS!</h2>"; 
+                         include 'fragments/tool/card-login.php';
                     }else {
                     //Usuário logado
                         include 'fragments/tool.php';

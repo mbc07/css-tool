@@ -38,6 +38,12 @@
 			case 'out':
 			$controller->out();
 			break;
+			case 'reset':
+			$controller->reset();
+			break;
+			case 'up':
+			$controller->reset();
+			break;
 
 		}
 

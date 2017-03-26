@@ -32,40 +32,6 @@ class Controller {
         ini_set('display_errors', 1);
     }
 
-    public function init() {
-
-        if (isset($_GET['op'])) {
-            $op = $_GET['op'];
-        } else {
-            $op = "";
-        }
-
-        switch ($op) {
-            case 'novo':
-            $this->novo();
-            break;
-            case 'cadastra':
-            $this->cadastra();
-            break;
-            case 'lista':
-            $this->lista();
-            break;
-            case 'login':
-            $this->login();
-            break;
-            default:
-            $this->index();
-            break;
-        }
-    }
-
-    public function index() {
-     require 'View/index.php';
- }
-
- public function novo() {
-    require 'View/novo.php';
-}
 
 public function cadastra() {
     if (isset($_POST['submit'])) {
@@ -132,9 +98,9 @@ public function lista() {
     require 'View/lista.php';
 }
 
-public function login() {
-    session_start(); 
 
+public function login() {
+   
     // Recupera o login 
     $login = isset($_POST["login"]) ? addslashes(trim($_POST["login"])) : FALSE; 
     // Recupera a senha, a criptografando em MD5 
@@ -181,10 +147,17 @@ public function login() {
 public function out() {
     session_start(); 
     session_destroy(); 
-
     echo '<script>location.href="pageController.php?url=index";</script>';
       
 }
+
+public function reset() {
+    session_start(); 
+    session_destroy(); 
+    echo '<script>location.href="pageController.php?url=index";</script>';
+      
+}
+
 
 }
 
