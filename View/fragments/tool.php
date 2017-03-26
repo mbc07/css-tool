@@ -7,7 +7,7 @@
             <?php // include 'fragments/tool/card-login.php'; ?>
             
             <!-- Upload do arquivo -->
-            <?php  include 'fragments/tool/card-upload.php'; ?>
+            <?php  //include '../View/fragments/tool/card-upload.php'; ?>
             
             <!-- Editor -->
             <?php  include '../View/fragments/tool/card-editor.php'; ?>
