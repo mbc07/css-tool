@@ -117,3 +117,52 @@
     width: 100%;
     height: 32px;
 }
+
+.app-tool-editor-controls-tab-container {
+    margin-top: 8px;
+}
+
+.app-tool-editor-controls-25 {
+    width: 20%;
+    margin-right: 5%;
+    float: left;
+}
+
+.app-tool-editor-controls-50 {
+    width: 45%;
+    margin-right: 5%;
+    float: left;
+}
+
+.app-tool-editor-controls-75 {
+    width: 70%;
+    margin-right: 5%;
+    float: left;
+}
+
+.app-tool-editor-controls-100 {
+    width: 95%;
+    margin-right: 5%;
+    float: left;
+}
+
+.app-tool-editor-controls-left {
+    margin-right: 5%;
+    float: left;
+}
+
+.app-tool-editor-controls-right {
+    margin-right: 5%;
+    float: right;
+}
+
+.app-tool-editor-controls-header {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    margin: 16px 0 8px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.app-tool-editor-controls-container {
+    clear: both;
+}

@@ -17,12 +17,12 @@
 
 </label>
 
-<p>Cor do texto
+<p class="app-tool-editor-controls-header">Cor do texto
     <input  type="color" id="color">  <button class="mdl-button mdl-js-button mdl-button--primary" disabled>
   X
 </button></p>
 
-<p>Estilo</p>
+<p class="app-tool-editor-controls-header">Estilo</p>
 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="initial_f0">
     <input type="radio" id="initial_f0" class="mdl-radio__button" name="font-style" value="1" checked>
     <span class="mdl-radio__label">Não definido</span>
@@ -40,7 +40,7 @@
     <span class="mdl-radio__label">Oblíquo</span>
 </label>
 
-<p>Alinhamento</p>
+<p class="app-tool-editor-controls-header">Alinhamento</p>
 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="initial_f1">
     <input type="radio" id="initial_f1" class="mdl-radio__button" name="text-align" value="1" checked>
     <span class="mdl-radio__label">Não definido</span>
@@ -62,7 +62,7 @@
     <span class="mdl-radio__label">Justificar</span>
 </label>
 
-<p>Decoração</p>
+<p class="app-tool-editor-controls-header">Decoração</p>
 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="initial_f2">
     <input type="radio" id="initial_f2" class="mdl-radio__button" name="text-decoration" value="1" checked>
     <span class="mdl-radio__label">Não definido</span>

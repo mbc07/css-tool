@@ -28,7 +28,7 @@
     <input class="mdl-textfield__input" type="text" id="max-height">
     <label class="mdl-textfield__label" for="max-height">Altura Máxima</label>
 </div><br/>
-<p>Overflow</p>
+<p class="app-tool-editor-controls-header">Overflow</p>
 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="initial_d">
     <input type="radio" id="initial_d" class="mdl-radio__button" name="overflow" value="1" checked>
     <span class="mdl-radio__label">Não definido</span>

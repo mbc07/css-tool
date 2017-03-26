@@ -21,7 +21,7 @@
                 <a href="#background" class="mdl-tabs__tab">Preenchimento</a>
                 <a href="#text" class="mdl-tabs__tab">Texto</a>
             </div>
-            <div class="mdl-tabs__panel is-active" id="positioning">
+            <div class="mdl-tabs__panel is-active app-tool-editor-controls-tab-container" id="positioning">
 
                 <?php include '../View/fragments/tool/tab-editor-position.php'; ?>
 

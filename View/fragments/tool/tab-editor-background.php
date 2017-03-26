@@ -1,5 +1,5 @@
 <?php ?>
-<p>Cor do plano de fundo
+<p class="app-tool-editor-controls-header">Cor do plano de fundo
     <input  type="color" id="background-color">  <button class="mdl-button mdl-js-button mdl-button--primary" disabled>
   X
 </button></p>
@@ -8,7 +8,7 @@
     <input class="mdl-textfield__input" type="text" id="background-image">
     <label class="mdl-textfield__label" for="height">Imagem do plano de fundo</label>
 </div>
-<p>Repetição</p>
+<p class="app-tool-editor-controls-header">Repetição</p>
 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="initial_b">
     <input type="radio" id="initial_b" class="mdl-radio__button" name="background-repeat" value="1" checked>
     <span class="mdl-radio__label">Não definido</span>
