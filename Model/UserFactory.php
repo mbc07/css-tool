@@ -17,18 +17,15 @@ class UserFactory extends AbstractFactory
 {
 
     private $nometabela = "usuario";
-    private $campos = "nome,email,senha";
+    private $campos = "id,nome,email,senha";
 
-    public function ContatoFactory() 
-    {
-        $this->AbstractFactory();
-    }
 
     public function salvar($obj) 
     {
-        $sql = "INSERT INTO " . $this->nometabela . " (" . $this->campos . ") Values ( " . "'" . $obj->getNome() . "','"
-                . $obj->getEmail() . "','"
-                . $obj->getSenha() . "' " . ") ";
+        $sql = "INSERT INTO " . $this->nometabela . " (" . $this->campos . ") Values ( " . "'" . count($this->listar()) . "','"
+        . $obj->getNome() . "','"
+        . $obj->getEmail() . "','"
+        . $obj->getSenha() . "' " . ") ";
 
         echo $sql;
 
@@ -41,7 +38,7 @@ class UserFactory extends AbstractFactory
 
     public function buscar($param) 
     {
-        $sql = "SELECT * FROM " . $this->nometabela . " Where email ='" . $param . "'";
+        $sql = "SELECT * FROM " . $this->nometabela . " WHERE email ='" . $param . "'";
         try 
         {
             $resultPDO = $this->db->query($sql);
@@ -63,6 +60,24 @@ class UserFactory extends AbstractFactory
         {
             $resultPDO = $this->db->query($sql);
             $result = $this->queryRowsToListOfObjects($resultPDO, "User");
+        } 
+        catch(Exception $exc) 
+        {
+            echo $exc->getMessage();
+            $result = null;
+        }
+        return $result;
+    }
+
+    public function buscarL($param) 
+    {
+
+        $sql = "SELECT * FROM " . $this->nometabela . " WHERE email ='" . $param . "'";
+        try 
+        {
+            $stmt = $this->db->prepare($sql); 
+            $stmt->execute(); 
+            $result = $stmt->fetchObject();
         } 
         catch(Exception $exc) 
         {

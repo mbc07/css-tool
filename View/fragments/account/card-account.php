@@ -8,15 +8,14 @@
         Troque de avatar<br/>pelo Gravatar
     </div>
     <div class="app-account-card-user-details">
-        <h1 class="mdl-card__title-text">Fulano Beltrano</h1>
-        <h2 class="mdl-card__subtitle-text">fulano@beltrano.net</h2>
+        <h1 class="mdl-card__title-text"><?php echo $_SESSION["nome_usuario"] ?></h1>
+        <h2 class="mdl-card__subtitle-text"><?php echo $_SESSION["id_usuario"] ?></h2>
     </div>
 </div>
 
 <div class="app-account-card-spacer-small"></div>
 
 <div class="mdl-card__actions">
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent app-account-card-right-button">
-        Sair
-    </button>
+    <a href="pageController.php?url=out"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent app-account-card-right-button">Sair
+    </button></a>
 </div>

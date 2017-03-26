@@ -26,7 +26,6 @@ class Controller {
     function __construct() 
     {
 
-
         $this->factory= new UserFactory();
 
         ini_set('error_reporting', E_ALL);
@@ -73,7 +72,6 @@ public function cadastra() {
 
         $nome = $_POST['nome'];
         $snome = $_POST['snome'];
-        $nome.= " ".$snome;;
         $email = $_POST['email'];
         $senha = $_POST['senha'];
         $senhac = $_POST['senhac'];
@@ -86,7 +84,7 @@ public function cadastra() {
             throw new Exception('Erro');
         }
 
-
+        $nome.= " ".$snome;
         $senha = md5($senha);
 
 
@@ -94,7 +92,6 @@ public function cadastra() {
 
                 //consulta o e-mail no banco
         $result = $this->factory->buscar($email);
-
                 // se o resultado for igual a 0 itens, então salva contato
         if (count($result) == 0) {
             $sucesso = $this->factory->salvar($usuario);
@@ -102,14 +99,15 @@ public function cadastra() {
 
 
         if ($sucesso) {
-            $msg = "<p>O contato " . $nome . " (" . $email . ") foi cadastrado com sucesso!</p>";
+            $msg = "O contato " . $nome . " (" . $email . ") foi cadastrado com sucesso!";
         } else if (!$sucesso && count($result) > 0) {
-            $msg = "<p>O contato n&atilde;o foi adicionado. E-mail j&aacute; existente na agenda!</p>";
+            $msg = "O contato n&atilde;o foi adicionado. E-mail j&aacute; cadastrado!";
         } else {
-            $msg = "<p>O contato n&atilde;o foi adicionado. Tente novamente mais tarde!</p>";
+            $msg = "O contato n&atilde;o foi adicionado. Tente novamente mais tarde!";
         }
 
         unset($nome);
+        unset($snome);
         unset($email);
         unset($senha);
         unset($senhac);
@@ -148,28 +146,31 @@ public function login() {
         exit; 
     }
 
-    // Obter usuario do BD que possui o login informado 
-    $stmt = $pdo->prepare("SELECT * FROM usuario WHERE email = :login LIMIT 1"); 
-    $stmt->bind_param(':login', $login, PDO::PARAM_STR); 
-    $stmt->execute(); 
-    $usuario = $stmt->fetchObject(); 
+   
+    //Realiza a busca pelo email no BD 
+     $usuario = $this->factory->buscar($login);
     //Verifica se a busca não retornou um usuário na BD
     if (!$usuario) { 
         echo "O login fornecido por você é inexistente!"; 
         exit;
     } 
 
+    $usuario = $this->factory->buscarL($login);
     // Verificar se a senha codificada com o md5 usado na senha do BD produz a senha do BD 
     if(!strcmp($senha, $usuario->senha))  
     { 
     // Usuario/Senha correta 
-     $_SESSION["id_usuario"]= $usuario->id; 
+     $_SESSION["id_usuario"]= $usuario->email; 
      $_SESSION["nome_usuario"] = $usuario->nome; 
-     header("Location: index.php"); 
+     echo '<script>location.href="pageController.php?url=index";</script>';
      exit; 
     }else { 
     // Usuario/Senha incorreta
-    echo "Senha inválida!"; 
+        echo '<script> alert("Senha inválida!");
+        location.href="pageController.php?url=index";
+        </script>';
+       
+    
     exit; 
     } 
 
@@ -179,7 +180,8 @@ public function out() {
     session_start(); 
     session_destroy(); 
 
-    header("Location: index.php");   
+    echo '<script>location.href="pageController.php?url=index";</script>';
+      
 }
 
 }

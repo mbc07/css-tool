@@ -1,12 +1,12 @@
 <?php ?>
 
-<form class="app-account-card-login-form" action="#">
+<form class="app-account-card-login-form" action="?url=login" method="post">
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <input class="mdl-textfield__input" type="email" id="login-email">
+        <input class="mdl-textfield__input" type="email" id="login-email" name="login">
         <label class="mdl-textfield__label" for="login-email">E-mail</label>
     </div>
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <input class="mdl-textfield__input" type="password" id="login-senha">
+        <input class="mdl-textfield__input" type="password" id="login-senha" name="senha">
         <label class="mdl-textfield__label" for="login-senha">Senha</label>
     </div>
 
