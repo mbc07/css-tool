@@ -1,6 +1,6 @@
 <?php ?>
 
-<div class="mdl-cell mdl-cell--4FF-col">
+<div class="mdl-cell mdl-cell--4-col">
     <div class="mdl-color-text--grey-800">
         <button id="app-tool-back-button" class="mdl-button mdl-js-button mdl-button--icon">
             <i class="material-icons">arrow_back</i>
@@ -35,7 +35,7 @@
             <button id="app-tool-download-button" 
                     class="mdl-button mdl-js-button 
                     mdl-button--raised mdl-js-ripple-effect 
-                    mdl-button--primary" onclick="addElementToTagList('h1', 'h1')">Gerar CSS</button>
+                    mdl-button--primary">Gerar CSS</button>
         </div>
     </div>
 </div>
