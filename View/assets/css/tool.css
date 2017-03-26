@@ -82,6 +82,10 @@
 }
 
 .app-tool-preview-card-li:hover {
+    background-color: #9e9e9e;
+}
+
+.app-tool-preview-card-li-selected {
     background-color: #e0e0e0;
 }
 
@@ -91,3 +95,25 @@
     display:block;
 }
 
+.app-tool-preview-card-li:hover > a {
+    color: #ffffff;
+}
+
+.app-tool-editor-header {
+    width: 100%;
+}
+
+.app-tool-editor-header > h4 {
+    position: absolute;
+    top: 8px;
+    left: 80px;
+}
+
+#app-editor-controls {
+    display: none;
+}
+
+.app-tool-editor-spacer {
+    width: 100%;
+    height: 32px;
+}

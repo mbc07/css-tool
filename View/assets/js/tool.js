@@ -12,11 +12,20 @@ function updateIframeMinHeight() {
 function selectedElementText(element) {
     var target = $('#app-selected-element-text');
     var containerID = 'app-selected-element-text';
+    var selectedID = 'app-tool-preview-card-li-selected';
 
     if (!element)
         element = 'nenhum';
 
     target.replaceWith('<span id="' + containerID + '">' + element + '</span>');
+
+    $('[data-selector="' + target.text() + '"]').parent().removeClass(selectedID);
+    $('[data-selector="' + element + '"]').parent().addClass(selectedID);
+
+    if (!$('#app-editor-controls').is(":visible")) {
+        $('#app-editor-greeting').slideToggle(250);
+        $('#app-editor-controls').slideToggle(250);
+    }
 
     return;
 }
@@ -92,13 +101,23 @@ $(window).resize(updateIframeMinHeight);
 // Escaneia e adiciona todos os elementos do iframe 
 // na lista de seletores ao carregar a página
 $(document).ready(function () {
+    $('#app-tool-tag-container').css('max-height', $(window).height() * 0.65);
+
     $('#app-tool-iframe').on('load', function () {
         $('#app-tool-iframe').contents().find('*').each(function () {
 
             addElementToTagList($(this).prop("nodeName").toLowerCase());
             addMultipleElementToTagList('.', $(this).attr('class'));
             addMultipleElementToTagList('#', $(this).attr('id'));
-            
+
         });
     });
 });
+
+function enableUnsavedChangesWarning() {
+    $(window).on('beforeunload', function () {
+        return 'Suas alterações serão perdidas!';
+    });
+    return;
+}
+

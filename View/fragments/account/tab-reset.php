@@ -10,11 +10,12 @@
         <label class="mdl-textfield__label" for="reset-email">E-mail</label>
     </div><br/>
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label app-account-card-shared-input-left">
-        <input class="mdl-textfield__input" type="password" id="reset-senha" >
+        <input class="mdl-textfield__input" type="password" pattern=".{8,}" id="reset-senha" >
         <label class="mdl-textfield__label" for="reset-senha">Nova Senha</label>
+        <span class="mdl-textfield__error">No mínimo 8 caracteres</span>
     </div>
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label app-account-card-shared-input-right">
-        <input class="mdl-textfield__input" type="password" id="reset-csenha" >
+        <input class="mdl-textfield__input" type="password" pattern=".{8,}" id="reset-csenha" >
         <label class="mdl-textfield__label" for="reset-csenha">Confirmar Nova Senha</label>
     </div>
 

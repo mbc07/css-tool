@@ -1,14 +1,42 @@
 <?php ?>
 
 <div class="mdl-cell mdl-cell--4-col">
-    <div class="mdl-color-text--grey-800">
-        <button id="app-tool-back-button" class="mdl-button mdl-js-button mdl-button--icon">
+    <div class="mdl-color-text--grey-800 app-tool-editor-header">
+        <button id="app-editor-back-button" class="mdl-button mdl-js-button mdl-button--icon">
             <i class="material-icons">arrow_back</i>
         </button>
-    </div>
-    <h3>Placeholder</h3>
-    <p>Espaço reservado para os cards de edição dos atributos. <a id="app-account-button" href="#" onclick="toggleAccountMenu(); return false;">Teste do card de usuário</a></p>
+        <div class="mdl-tooltip" for="app-editor-back-button">
+            Suas alterações<br>serão perdidas!
+        </div>
 
+        <h4>Editor</h4>
+        <div class="app-tool-editor-spacer"></div>
+
+        <p id="app-editor-greeting">Para começar, selecione um elemento na lista de seletores.</p>
+
+        <div id="app-editor-controls" class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+            <div class="mdl-tabs__tab-bar">
+                <a href="#positioning" class="mdl-tabs__tab is-active">Posição</a>
+                <a href="#dimension" class="mdl-tabs__tab">Dimensões</a>
+                <a href="#background" class="mdl-tabs__tab">Preenchimento</a>
+                <a href="#font" class="mdl-tabs__tab">Fonte</a>
+            </div>
+            <div class="mdl-tabs__panel is-active" id="positioning">
+
+                <?php include 'fragments/tool/tab-editor-position.php'; ?>
+
+            </div>
+            <div class="mdl-tabs__panel" id="dimension">
+                <?php include 'fragments/tool/tab-editor-dimension.php'; ?>
+            </div>
+            <div class="mdl-tabs__panel" id="background">
+                <p>Second tab's content.</p>
+            </div>
+            <div class="mdl-tabs__panel" id="font">
+                <p>Third tab's content.</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="mdl-cell mdl-cell--8-col">
