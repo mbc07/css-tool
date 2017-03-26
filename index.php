@@ -1,7 +1,1 @@
-<?php 
-
-require_once 'Controller/controller.php';
-
-$controller = new Controller();
-
-$controller->init();
+<?php header("Location: Controller/pageController.php?url=index");   ?>
