@@ -2,7 +2,7 @@
 
 <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
-        <?php include 'fragments/navbar.php'; ?>
+        <?php include '../View/fragments/navbar.php'; ?>
 
         <main class="mdl-layout__content">
             <section class="mdl-layout__tab-panel is-active" id="home">

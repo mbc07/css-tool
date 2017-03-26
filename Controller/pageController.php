@@ -18,7 +18,7 @@
 		echo "<!DOCTYPE html>\n\n";
 		echo "<html>";
 
-		require_once('config.php');
+		require_once 'config.php';
 		require_once '../View/fragments/head.php';
 		require_once '../Controller/controller.php';
 
@@ -46,7 +46,7 @@
 			break;
 
 		}
-
+		require_once '../View/fragments/footer.php';
 		echo "</html>\n";
 	}
 	?>
