@@ -33,7 +33,7 @@
                 <?php include '../View/fragments/tool/tab-editor-background.php'; ?>
             </div>
             <div class="mdl-tabs__panel" id="font">
-                <p>Third tab's content.</p>
+                <?php include '../View/fragments/tool/tab-editor-font.php'; ?>
             </div>
         </div>
     </div>
