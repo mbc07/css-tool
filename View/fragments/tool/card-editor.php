@@ -23,14 +23,14 @@
             </div>
             <div class="mdl-tabs__panel is-active" id="positioning">
 
-                <?php include 'fragments/tool/tab-editor-position.php'; ?>
+                <?php include '../View/fragments/tool/tab-editor-position.php'; ?>
 
             </div>
             <div class="mdl-tabs__panel" id="dimension">
-                <?php include 'fragments/tool/tab-editor-dimension.php'; ?>
+                <?php include '../View/fragments/tool/tab-editor-dimension.php'; ?>
             </div>
             <div class="mdl-tabs__panel" id="background">
-                <?php include 'fragments/tool/tab-editor-background.php'; ?>
+                <?php include '../View/fragments/tool/tab-editor-background.php'; ?>
             </div>
             <div class="mdl-tabs__panel" id="font">
                 <p>Third tab's content.</p>
@@ -52,7 +52,7 @@
             </div>
 
             <div id="app-iframe-container" class="mdl-cell mdl-cell--6-col mdl-card mdl-card--expand mdl-shadow--2dp">
-                <iframe id="app-tool-iframe" class="app-tool-preview-iframe" src="assets/test.html"></iframe>
+                <iframe id="app-tool-iframe" class="app-tool-preview-iframe" src="../View/assets/test.html"></iframe>
             </div>
         </div>
 

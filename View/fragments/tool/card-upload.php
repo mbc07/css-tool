@@ -22,13 +22,13 @@
 
         <div class="mdl-card__supporting-text mdl-tabs__panel is-active" id="text_upload">
 
-            <?php include 'fragments/tool/tab-text-upload.php'; ?>
+            <?php include '../View/fragments/tool/tab-text-upload.php'; ?>
 
         </div>
 
         <div class="mdl-card__supporting-text mdl-tabs__panel" id="file_upload">
 
-            <?php include 'fragments/tool/tab-file-upload.php'; ?>
+            <?php include '../View/fragments/tool/tab-file-upload.php'; ?>
 
         </div>
     </div>

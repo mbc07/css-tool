@@ -9,23 +9,19 @@
  * @since css-tool 2017-1
  * @link 
  */
-require_once(__DIR__ . '/../assets/config.php');
 ?>
-
-<link rel="stylesheet" type="text/css" href="assets/css/navbar.css">
-<script src="assets/js/navbar.js" charset="UTF-8"></script>
 
 <header class="mdl-layout__header app-navbar">
     <div class="mdl-layout__header-row">
         <!-- Title -->
         <span class="mdl-layout-title"><?= APP_NAME ?></span>
         <div class="mdl-layout-spacer"></div>
-        <button id="app-account-button" onclick="toggleAccountMenu(); return false;" class="mdl-button mdl-js-button mdl-button--icon app-navbar-account-button">
-            <!------------------------------------------------------
+        <button onclick="toggleAccountMenu(); return false;" class="mdl-button mdl-js-button mdl-button--icon app-navbar-account-button">
+        <!--*******************************************************
             IMAGEM A SER MOSTRADA QUANDO O USUÁRIO ESTÁ LOGADO 
-        --------------------------------------------------------
+            *******************************************************
         <img id="app-account-button" src="https://www.gravatar.com/avatar/<hash md5 do email>?d=identicon"> 
-            -->
+        -->
             <i id="app-account-button" class="material-icons">account_circle</i>
         </button>
     </div>
@@ -41,10 +37,10 @@ require_once(__DIR__ . '/../assets/config.php');
         <div class="mdl-card mdl-shadow--4dp app-account-card">
 
             <!-- Usuário logado -->
-            <?php // include 'fragments/account/card-account.php'; ?>
+            <?php include '../View/fragments/account/card-account.php'; ?>
 
             <!-- Usuário não logado -->
-            <?php include 'fragments/account/card-login.php'; ?>
+            <?php include '../View/fragments/account/card-login.php'; ?>
 
         </div>
     </div>
