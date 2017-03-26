@@ -1,6 +1,6 @@
 <?php ?>
 
-<form action="?op=cadastra" method="post">
+<form action="?url=cad" method="post">
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label app-account-card-shared-input-left">
         <input class="mdl-textfield__input" type="text" id="register-nome" name="nome">
         <label class="mdl-textfield__label" for="register-nome">Nome</label>
@@ -27,6 +27,6 @@
 
     <div class="mdl-card__actions">
         <input class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect app-account-card-left-button" type="reset" value="Limpar">
-        <input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent app-account-card-right-button" type="submit" value="Cadastrar">
+        <input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent app-account-card-right-button" type="submit" value="Cadastrar" name="submit">
     </div>
 </form>

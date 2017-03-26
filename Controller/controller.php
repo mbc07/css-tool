@@ -1,6 +1,6 @@
 <?php
-require_once("Model/User.class.php");
-require_once("Model/UserFactory.php");
+require_once("../Model/User.class.php");
+require_once("../Model/UserFactory.php");
 
 
 
@@ -72,6 +72,8 @@ public function cadastra() {
     if (isset($_POST['submit'])) {
 
         $nome = $_POST['nome'];
+        $snome = $_POST['snome'];
+        $nome.= " ".$snome;;
         $email = $_POST['email'];
         $senha = $_POST['senha'];
         $senhac = $_POST['senhac'];
@@ -112,7 +114,7 @@ public function cadastra() {
         unset($senha);
         unset($senhac);
 
-        require 'View/mensagem.php';
+        require '../View/mensagem.php';
     } catch (Exception $e) {
         if ($nome == "") {
             $msg = "O campo <strong>Nome</strong> deve ser preenchido!";
@@ -121,7 +123,7 @@ public function cadastra() {
         }else if ($senha != $senhac) {
             $msg = "<strong>Erro:</strong> As senhas não se conferem!";
         }
-        require 'View/mensagem.php';
+        require '../View/mensagem.php';
     }
 }
 }

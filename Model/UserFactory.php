@@ -1,7 +1,7 @@
 <?php
 
-require_once("Model/User.class.php");
-require_once("Model/AbstractFactory.php");
+require_once("../Model/User.class.php");
+require_once("../Model/AbstractFactory.php");
 
 /*
  * To change this license header, choose License Headers in Project Properties.
