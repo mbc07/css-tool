@@ -1,5 +1,6 @@
 <?php ?>
 <div class="app-tool-editor-controls-container">
+    <div class="app-tool-editor-controls-spacer"></div>
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label app-tool-editor-controls-50">
         <input class="mdl-textfield__input" type="text" id="margin">
         <label class="mdl-textfield__label" for="margin">Margem</label>
@@ -17,6 +18,7 @@
         <label class="mdl-textfield__label" for="z-index">Camada Z</label>
     </div>
 </div>
+
 <div class="app-tool-editor-controls-container">
     <p class="app-tool-editor-controls-header app-tool-editor-controls-100">Posicionamento</p>
     <div class="app-tool-editor-controls-container">
@@ -48,7 +50,9 @@
         </div>
     </div>
 </div>
+
 <div class="app-tool-editor-controls-container">
+    <div class="app-tool-editor-controls-spacer"></div>
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label app-tool-editor-controls-25">
         <input class="mdl-textfield__input" type="text" id="margin">
         <label class="mdl-textfield__label" for="left">Esquerda</label>
