@@ -26,7 +26,7 @@
  	*/
  	public function generatorHash($name)
  	{
- 		return "String Hash";
+ 		return MD5($name);
  	}
  }
  ?>
