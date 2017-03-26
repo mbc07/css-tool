@@ -20,8 +20,8 @@
     <label class="mdl-textfield__label" for="z-index">Camada Z</label>
 </div><br/>
 <p>Posicionamento</p>
-<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="initial">
-    <input type="radio" id="initial" class="mdl-radio__button" name="position" value="1" checked>
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="initial_p">
+    <input type="radio" id="initial_p" class="mdl-radio__button" name="position" value="1" checked>
     <span class="mdl-radio__label">Inicial</span>
 </label>
 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="static">

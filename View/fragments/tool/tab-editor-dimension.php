@@ -29,23 +29,23 @@
     <label class="mdl-textfield__label" for="max-height">Altura Máxima</label>
 </div><br/>
 <p>Overflow</p>
-<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="initial">
-    <input type="radio" id="initial" class="mdl-radio__button" name="overflow" value="1" checked>
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="initial_d">
+    <input type="radio" id="initial_d" class="mdl-radio__button" name="overflow" value="1" checked>
     <span class="mdl-radio__label">Inicial</span>
 </label>
 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="visible">
-    <input type="radio" id="static" class="mdl-radio__button" name="overflow" value="2">
+    <input type="radio" id="visible" class="mdl-radio__button" name="overflow" value="2">
     <span class="mdl-radio__label">Visível</span>
 </label>
 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="hidden">
-    <input type="radio" id="relative" class="mdl-radio__button" name="overflow" value="3">
+    <input type="radio" id="hidden" class="mdl-radio__button" name="overflow" value="3">
     <span class="mdl-radio__label">Oculto</span>
 </label>
 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="scroll">
-    <input type="radio" id="fixed" class="mdl-radio__button" name="overflow" value="4">
+    <input type="radio" id="scroll" class="mdl-radio__button" name="overflow" value="4">
     <span class="mdl-radio__label">Rolar</span>
 </label>
 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="auto">
-    <input type="radio" id="absolute" class="mdl-radio__button" name="overflow" value="5">
+    <input type="radio" id="auto" class="mdl-radio__button" name="overflow" value="5">
     <span class="mdl-radio__label">Automático</span>
 </label>

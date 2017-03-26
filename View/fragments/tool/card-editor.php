@@ -30,7 +30,7 @@
                 <?php include 'fragments/tool/tab-editor-dimension.php'; ?>
             </div>
             <div class="mdl-tabs__panel" id="background">
-                <p>Second tab's content.</p>
+                <?php include 'fragments/tool/tab-editor-background.php'; ?>
             </div>
             <div class="mdl-tabs__panel" id="font">
                 <p>Third tab's content.</p>
