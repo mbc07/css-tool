@@ -1,4 +1,14 @@
 <?php
+
+
+    /**
+     * Definindo os campos para a conexão com o datebase.    
+     */
+
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+define('DB_NAME', 'csstool');
  
 /*
  * Material utilizado para as aulas práticas da disciplinas da Faculdade de
@@ -20,7 +30,7 @@ abstract class AbstractFactory {
     function __construct() {
 
         try {
-            $this->db = new PDO("mysql:host=localhost;dbname=csstool;charset=utf8","root","");
+            $this->db = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8', DB_USER, DB_PASS);
         } catch (PDOException $exception) {
             echo $exception->getMessage();
         } catch (Exception $exception) {

@@ -2,13 +2,7 @@
 
 <html>
 <head>
-	<?php include 'fragments/head.php'; 
-	require_once 'Controller/controller.php';
-
-$controller = new Controller();
-
-$controller->init();
-	?>
+	<?php include 'fragments/head.php'; ?>
 
 </head>
 

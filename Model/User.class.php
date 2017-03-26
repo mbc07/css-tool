@@ -26,7 +26,7 @@
  	}
 
  	function getNome(){
-        return $this->nome;
+        return $this->name;
     }
     
     function getEmail(){
