@@ -14,7 +14,7 @@
  {
  	public function op($fileName, $id)
  	{
- 		
+ 		$this->generatorHash($fileName);
  	}
 
  	/**
