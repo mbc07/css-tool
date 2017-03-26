@@ -11,51 +11,61 @@ require_once("Model/AbstractFactory.php");
 
 /**
  * Description of ContatoFactory
- *
- * @author 201519060360
- */
-class UserFactory extends AbstractFactory {
+ * @author jonathan 
+*/
+class UserFactory extends AbstractFactory 
+{
 
     private $nometabela = "usuario";
     private $campos = "nome,email,senha";
 
-    public function ContatoFactory() {
+    public function ContatoFactory() 
+    {
         $this->AbstractFactory();
     }
 
-    public function salvar($obj) {
+    public function salvar($obj) 
+    {
         $sql = "INSERT INTO " . $this->nometabela . " (" . $this->campos . ") Values ( " . "'" . $obj->getNome() . "','"
                 . $obj->getEmail() . "','"
                 . $obj->getSenha() . "' " . ") ";
 
         echo $sql;
 
-        if ($this->db->exec($sql)) {
+        if($this->db->exec($sql))
             return true;
-        } else {
+        else 
             return false;
-        }
+        
     }
 
-    public function buscar($param) {
+    public function buscar($param) 
+    {
         $sql = "SELECT * FROM " . $this->nometabela . " Where email ='" . $param . "'";
-        try {
+        try 
+        {
             $resultPDO = $this->db->query($sql);
             $result = $this->queryRowsToListOfObjects($resultPDO, "User");
-        } catch (Exception $exc) {
+        } 
+        catch(Exception $exc) 
+        {
             echo $exc->getMessage();
             $result = array();
         }
         return $result;
     }
 
-    public function listar() {
+    public function listar() 
+    {
 
         $sql = "SELECT * FROM " . $this->nometabela;
-        try {
+        try 
+        {
             $resultPDO = $this->db->query($sql);
             $result = $this->queryRowsToListOfObjects($resultPDO, "User");
-        } catch (Exception $exc) {
+        } 
+        catch(Exception $exc) 
+        {
             echo $exc->getMessage();
             $result = null;
         }

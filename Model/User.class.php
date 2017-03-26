@@ -25,15 +25,18 @@
  		$this->password = $password;
  	}
 
- 	function getNome(){
+ 	function getNome()
+ 	{
         return $this->name;
     }
     
-    function getEmail(){
+    function getEmail()
+    {
         return $this->email;
     }
 
-    function getSenha(){
+    function getSenha()
+    {
         return $this->password;
     }
  }

@@ -16,7 +16,7 @@
         <!-- Title -->
         <span class="mdl-layout-title"><?= APP_NAME ?></span>
         <div class="mdl-layout-spacer"></div>
-        <button onclick="toggleAccountMenu(); return false;" class="mdl-button mdl-js-button mdl-button--icon app-navbar-account-button">
+        <button id="app-account-button" onclick="toggleAccountMenu(); return false;" class="mdl-button mdl-js-button mdl-button--icon app-navbar-account-button">
         <!--*******************************************************
             IMAGEM A SER MOSTRADA QUANDO O USUÁRIO ESTÁ LOGADO 
             *******************************************************

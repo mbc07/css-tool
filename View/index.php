@@ -1,5 +1,5 @@
 <frameset rows="100%" border="0">
-        <frame src="http://localhost/css-tool/Controller/pageController.php?url=index">
+        <frame src="http://localhost/clone/css-tool/Controller/pageController.php?url=index">
 </frameset> 
 
 

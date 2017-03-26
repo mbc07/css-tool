@@ -2,7 +2,7 @@
 /**
 	* Faz a verificacao se exite a variavel get url.
 */
-if($_GET['url'])
+if(isset($_GET['url']))
 	constructPage($_GET['url']);
 
 else 
@@ -23,7 +23,5 @@ function constructPage($url)
 		break;
 
 	}
-
-	
 }
 ?>

@@ -1,7 +1,7 @@
 ## Redirecionar em caso de erros ##
 ErrorDocument 400 http://localhost/css-tool/Controller/pageController.php?url=index
 ErrorDocument 403 http://localhost/css-tool/Controller/pageController.php?url=index
-ErrorDocument 404 http://localhost/css-tool/Controller/pageController.php?url=index
+ErrorDocument 404 http://localhost/clone/css-tool/Controller/pageController.php?url=index
 ErrorDocument 500 http://localhost/css-tool/Controller/pageController.php?url=index
 ErrorDocument 501 http://localhost/css-tool/Controller/pageController.php?url=index
 ErrorDocument 502 http://localhost/css-tool/Controller/pageController.php?url=index

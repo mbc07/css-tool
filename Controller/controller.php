@@ -23,7 +23,8 @@ class Controller {
 
     private $factory;
 
-    function __construct() {
+    function __construct() 
+    {
 
 
         $this->factory= new UserFactory();
@@ -157,7 +158,8 @@ public function login() {
     } 
 
     // Verificar se a senha codificada com o md5 usado na senha do BD produz a senha do BD 
-    if(!strcmp($senha, $usuario->senha))  { 
+    if(!strcmp($senha, $usuario->senha))  
+    { 
     // Usuario/Senha correta 
      $_SESSION["id_usuario"]= $usuario->id; 
      $_SESSION["nome_usuario"] = $usuario->nome; 

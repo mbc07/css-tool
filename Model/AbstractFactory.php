@@ -10,7 +10,7 @@ define('DB_USER', 'root');
 define('DB_PASS', '');
 define('DB_NAME', 'csstool');
  
-/*
+/**
  * Material utilizado para as aulas práticas da disciplinas da Faculdade de
  * Computação da Universidade Federal de Mato Grosso do Sul (FACOM / UFMS).
  * Seu uso é permitido para fins apenas acadêmicos, todavia mantendo a
@@ -19,10 +19,11 @@ define('DB_NAME', 'csstool');
  *
  * Classe abstrata que define o padrão para todas as fábricas.
  *
- * @author Jane Eleutério
+ * @author Matheus Cassiano
  * @author Rodrigo Lopes - Acadêmico CC (Otimização do método queryRowsToListOfObjects)
  * @version 2.1 - 19/Dez/2016
  */
+ 
 abstract class AbstractFactory {
 
     protected $db;
