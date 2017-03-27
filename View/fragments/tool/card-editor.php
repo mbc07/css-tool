@@ -2,8 +2,8 @@
 
 <div class="mdl-cell mdl-cell--4-col">
     <div class="mdl-color-text--grey-800 app-tool-editor-header">
-        <button id="app-editor-back-button" class="mdl-button mdl-js-button mdl-button--icon">
-            <i class="material-icons">arrow_back</i>
+        <button id="app-editor-back-button" class="mdl-button mdl-js-button mdl-button--icon"><a href="pageController.php?url=index">
+            <i class="material-icons">arrow_back</i></a>
         </button>
         <div class="mdl-tooltip" for="app-editor-back-button">
             Suas alterações<br>serão perdidas!
