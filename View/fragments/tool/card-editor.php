@@ -52,7 +52,12 @@
             </div>
 
             <div id="app-iframe-container" class="mdl-cell mdl-cell--6-col mdl-card mdl-card--expand mdl-shadow--2dp">
-                <iframe id="app-tool-iframe" class="app-tool-preview-iframe" src="../View/assets/test.html"></iframe>
+                <iframe id="app-tool-iframe" class="app-tool-preview-iframe" ></iframe>
+                <script>
+                    var hash = CryptoJS.MD5($('.app-account-card-user-details > h2').text());
+                    $('#app-tool-iframe').attr('src', '../Model/uploads/' + hash + '.html');
+                </script>
+
             </div>
         </div>
 
@@ -61,9 +66,9 @@
             </div>
             <form action='../../../Controller/' method='post'>
                 <button type='submit' id="app-tool-download-button" 
-                    class="mdl-button mdl-js-button 
-                    mdl-button--raised mdl-js-ripple-effect 
-                    mdl-button--primary">Gerar CSS
+                        class="mdl-button mdl-js-button 
+                        mdl-button--raised mdl-js-ripple-effect 
+                        mdl-button--primary">Gerar CSS
                 </button>
             </form>
         </div>

@@ -33,4 +33,5 @@
     <script src="../View/assets/js/common.js" charset="UTF-8"></script>
     <script src="../View/assets/js/navbar.js" charset="UTF-8"></script>
     <script src="../View/assets/js/tool.js" charset="UTF-8"></script>
+    <script src="../View/assets/js/md5.js" charset="UTF-8"></script>
 </head>

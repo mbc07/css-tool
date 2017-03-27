@@ -6,7 +6,7 @@
                 
                     <button class='mdl-button mdl-js-button 
                     mdl-button--raised mdl-js-ripple-effect 
-                    ' href="#">Referencias</button>
+                    ' href="#">Referências</button>
                     <button class='mdl-button mdl-js-button 
                     mdl-button--raised mdl-js-ripple-effect 
                     'href="#">Git</button>
