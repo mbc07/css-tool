@@ -1,4 +1,4 @@
-<?php 
+ <?php 
 /** 
  * Write Output style.css.
  *
@@ -9,13 +9,10 @@
  * @since css-tool 2017-1
  * @link 
  */
-
  Class Writer
  {
  	private $element;
  	private $name;
-
-
  	function __construct($arrayElements, $name)
  	{
  		$this->element = $arrayElements;
@@ -23,7 +20,12 @@
  		$this->writeFile("Style Css Tool.\r\n");
  		$this->conf($this->element);
  	}
-
+ 	/**
+ 	 * Metodo faz a configuracao do valores do array.
+ 	 *
+ 	 * @param  ElementCss[] elemtn.
+ 	 *
+ 	*/
  	private function conf($element)
  	{
  		$array = array();
@@ -33,7 +35,6 @@
  		{
  			if($base->id === $prev)
  				continue;
-
  			$index=0;
  			foreach($element as $value)
  			{
@@ -56,26 +57,32 @@
  				$this->fileOut($array);
  				$array = array();
  			}
-
  			$prev = $base->id;
  			$i++;
  		}
  	}
-
+ 	/**
+ 	 * Metodo concatena conteudo que sera gravado.
+ 	 *
+ 	 * @param  ElementCss[] array.
+ 	 *
+ 	*/
  	private function fileOut($array)
  	{
-
  		$content = $array[0]->id."{ \r\n";
-
  		foreach($array as $css)
  		{
  			$content = $content."  ".$css->name.": ".$css->value.";\r\n";
  		}
-
  		$content = $content."} \r\n";
  		$this->writeFile($content);
  	}
-
+ 	/**
+ 	 * Metodo grava em arquivo.
+ 	 *
+ 	 * @param  String Do que sera gravado no arquivo.
+ 	 *
+ 	*/
  	private function writeFile($content)
  	{
 	    $input = fopen('file/'.$this->name.".txt", "a");

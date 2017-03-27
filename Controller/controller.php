@@ -31,6 +31,7 @@ class Controller {
      * Gerencia o formulário de cadastramento."     
      */
 public function cadastra() {
+    //verifica se houve o submit
     if (isset($_POST['submit'])) {
 
         $nome = $_POST['nome'];
@@ -93,11 +94,6 @@ public function cadastra() {
 }
 }
 
-public function lista() {
-
-    $result = $this->factory->listar();
-    require 'View/lista.php';
-}
 
     /**
      * Lida com a autenticação do usuário."     
@@ -146,7 +142,7 @@ public function login() {
 }
 
     /**
-     * Lida com deslogar do usuário."     
+     * Lida com deslogar do usuário.    
      */
 public function out() {
     session_destroy(); 
@@ -154,8 +150,11 @@ public function out() {
       
 }
 
+    /**
+     * Lida com a redefinição da senha do usuário.    
+     */
 public function reset() {
-
+    //Verifica se vou o submit para a redefinição
      if (isset($_POST['reset'])) {
 
         $nome = $_POST['nome'];
@@ -165,9 +164,9 @@ public function reset() {
         $sucesso = false;
 
         try {
-
+            //busca o usuário no banco pelo email
             $usuario = $this->factory->buscarL($email);
-            //verifica se a senha  e a senha de confirmação são iguais. Senão verifica se os campos do nome e email estão vazios.
+            //Realização a verificaçãod e exceções
            if($nome == "" || $email == ""){
            throw new Exception('Erro');
         }else if (!$usuario) {
@@ -182,6 +181,7 @@ public function reset() {
         //realiza a criptografia por hash md5 da senha.
         $senha = md5($senha);
 
+        //realiza a função de update definida no UserFactory.php
         $sucesso = $this->factory->update($usuario->nome, $usuario->email, $senha, $usuario->id);
 
         //Definindo a mensagem que irá exibir dependendo do $sucesso
@@ -214,10 +214,13 @@ public function reset() {
 }
 
 
+    /**
+     * Lida com a leitura de arquivos.    
+     */
 public function up() {
   
    $file = new FileManager();
-
+   //realiza a função de leitura de arquivo definido no FileManager.class.php
    $file->op($_SESSION["id_usuario"],0);
       
 }

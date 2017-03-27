@@ -86,6 +86,14 @@ class UserFactory extends AbstractFactory
         return $result;
     }
 
+    /**
+     * Realiza o UPDATE do usuário
+     * @param String $nome - o nome do usuário
+     * @param String $email - o email do usuário
+     * @param String $senha - a nova senha de usuário
+     * @param String $id - id do usuário
+     * @return  true se executar o update ou false se não executar
+     */  
       public function update($nome, $email, $senha, $id) 
     {
 
