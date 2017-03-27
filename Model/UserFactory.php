@@ -86,4 +86,16 @@ class UserFactory extends AbstractFactory
         return $result;
     }
 
+      public function update($nome, $email, $senha, $id) 
+    {
+
+        $sql = "UPDATE ".$this->nometabela." SET nome = '".$nome."', senha = '".$senha."', email = '".$email."' WHERE id = '".$id."'";
+        
+        if($this->db->exec($sql))
+            return true;
+        else 
+            return false;
+    }
+
+
 }

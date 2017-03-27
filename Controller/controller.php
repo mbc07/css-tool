@@ -66,11 +66,11 @@ public function cadastra() {
 
         //Definindo a mensagem que irá exibir dependendo do $sucesso
         if ($sucesso) {
-            $msg = "O contato " . $nome . " (" . $email . ") foi cadastrado com sucesso!";
+            $msg = "O usuário " . $nome . " (" . $email . ") foi cadastrado com sucesso!";
         } else if (!$sucesso && count($result) > 0) {
-            $msg = "O contato n&atilde;o foi adicionado. E-mail j&aacute; cadastrado!";
+            $msg = "O usuário n&atilde;o foi adicionado. E-mail j&aacute; cadastrado!";
         } else {
-            $msg = "O contato n&atilde;o foi adicionado. Tente novamente mais tarde!";
+            $msg = "O usuário n&atilde;o foi adicionado. Tente novamente mais tarde!";
         }
 
         unset($nome);
@@ -155,14 +155,61 @@ public function out() {
 }
 
 public function reset() {
-    session_start(); 
-    session_destroy(); 
-    echo '<script>location.href="pageController.php?url=index";</script>';
-      
-}
 
-public function editF() {
-    
+     if (isset($_POST['reset'])) {
+
+        $nome = $_POST['nome'];
+        $email = $_POST['email'];
+        $senha = $_POST['nsenha'];
+        $senhac = $_POST['cnsenha'];
+        $sucesso = false;
+
+        try {
+
+            $usuario = $this->factory->buscarL($email);
+            //verifica se a senha  e a senha de confirmação são iguais. Senão verifica se os campos do nome e email estão vazios.
+           if($nome == "" || $email == ""){
+           throw new Exception('Erro');
+        }else if (!$usuario) {
+             throw new Exception('Erro');
+         }elseif ($senha != $senhac) {
+            throw new Exception('Erro');
+        }elseif ($usuario->nome != $nome) {
+             throw new Exception('Erro');
+        }
+
+
+        //realiza a criptografia por hash md5 da senha.
+        $senha = md5($senha);
+
+        $sucesso = $this->factory->update($usuario->nome, $usuario->email, $senha, $usuario->id);
+
+        //Definindo a mensagem que irá exibir dependendo do $sucesso
+        if ($sucesso) {
+            $msg = "A senha do usuário " . $nome . " (" . $email . ") foi redefinida com sucesso!";
+        } else {
+            $msg = "O senha n&atilde;o foi redefinida. Tente novamente mais tarde!";
+        }
+
+        unset($nome);
+        unset($email);
+        unset($senha);
+        unset($senhac);
+
+        require '../View/mensagem.php';
+    } catch (Exception $e) {
+        if($nome == "" || $email == ""){
+            $msg =  "<strong>Preencha</strong> todos os campos!";
+        }else if (!$usuario) {
+            $msg =  "O usuário n&atilde;o foi adicionado. E-mail j&aacute; cadastrado!";
+        } else if ($senha != $senhac) {
+            $msg = "<strong>Erro:</strong> As senhas não se conferem!";
+        }else if ($usuario->nome != $nome) {
+            $msg = "O <strong>Nome</strong> não condiz com o <strong>E-mail</strong>";
+        }
+        require '../View/mensagem.php';
+    }
+    }
       
 }
 
