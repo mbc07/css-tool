@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="../View/assets/css/footer.css" >
 
 
 <footer>

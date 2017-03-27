@@ -37,7 +37,7 @@ CREATE TABLE 'usuario' (
 -- Extraindo dados da tabela `usuario`
 --
 
-INSERT INTO 'usuario' ('id', 'nome', 'email', 'senha') VALUES
+INSERT INTO usuario ('id', 'nome', 'email', 'senha') VALUES
 (0, 'Valdemiro Souza', 'souza@gmail.com', 'd6b0ab7f1c8ab8f514db9a6d85de160a'),
 (1, 'Joao Neto', 'neto@gmail.com', 'e19d5cd5af0378da05f63f891c7467af'),
 (2, 'Lucas Amado', 'amado@gmail.com', '297ff4a97fcda4bc0ecf0bb18168034a');

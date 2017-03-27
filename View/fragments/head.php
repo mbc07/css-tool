@@ -21,6 +21,7 @@
     <link rel="stylesheet" type="text/css" href="../View/assets/css/common.css">
     <link rel="stylesheet" type="text/css" href="../View/assets/css/navbar.css">
     <link rel="stylesheet" type="text/css" href="../View/assets/css/tool.css">
+    
 
     <!-- Fontes -->
     <link rel="stylesheet" type="text/css" href="../View/assets/css/fonts/icons/material-icons.css">

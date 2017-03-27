@@ -28,22 +28,28 @@
  	{
  		$array = array();
  		$prev = null;
- 		$index;
+ 		$index; $i = 0;
  		foreach($element as $base)
  		{
  			if($base->id === $prev)
  				continue;
 
+ 			$index=0;
  			foreach($element as $value)
  			{
- 				$index=0;
+ 				
 	 			if($base->id === $value->id)
 				{
-					array_push($array, $value);	
+					array_push($array, $value);
+					if($element != $value)
+					{
+						array_push($array, $element);	
+						unset($element[$i]);	
+					}
 					unset($element[$index]);	
-					$index++;
+					
 				}
- 				
+				$index++;
  			}
  			if($array != null)
  			{
@@ -52,6 +58,7 @@
  			}
 
  			$prev = $base->id;
+ 			$i++;
  		}
  	}
 
@@ -71,7 +78,7 @@
 
  	private function writeFile($content)
  	{
-	    $input = fopen($this->name.".txt", "a");
+	    $input = fopen('file/'.$this->name.".txt", "a");
 	    fwrite($input, $content);
 	    
 	    fclose($input);

@@ -14,7 +14,7 @@ define('DB_NAME', 'csstool');
  *
  * Classe abstrata que define o padrão para todas as fábricas.
  *
- * @author Matheus Cassiano
+ * @author Jonatha 
  * @author Rodrigo Lopes - Acadêmico CC (Otimização do método queryRowsToListOfObjects)
  * @version 2.1 - 19/Dez/2016
  */
