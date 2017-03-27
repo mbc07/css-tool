@@ -45,7 +45,7 @@
 			$controller->up();
 			break;
 			case 'editFile':
-			$controller->up();
+			$controller->editF();
 			break;
 
 		}

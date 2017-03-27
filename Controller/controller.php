@@ -152,7 +152,6 @@ public function login() {
      * Lida com deslogar do usuário."     
      */
 public function out() {
-    session_start(); 
     session_destroy(); 
     echo '<script>location.href="pageController.php?url=index";</script>';
       
@@ -175,17 +174,7 @@ public function up() {
   
    $file = new FileManager();
 
-    if(isset($_FILES['fileUpload']))
-   {
-      date_default_timezone_set("Brazil/East"); //Definindo timezone padrão
- 
-      $ext = strtolower(substr($_FILES['fileUpload']['name'],-4)); //Pegando extensão do arquivo
-      $new_name = $file->generatorHash($_SESSION["id_usuario"]) . ".".$ext; //Definindo um novo nome para o arquivo
-      $dir = '../Model/uploads/'; //Diretório para uploads
- 
-      move_uploaded_file($_FILES['fileUpload']['tmp_name'], $dir.$new_name); //Fazer upload do arquivo
-      echo '<script>location.href="pageController.php?url=index";</script>';
-   }
+   $file->op($_SESSION["id_usuario"],0);
       
 }
 

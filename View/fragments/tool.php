@@ -6,10 +6,17 @@
             <?php // include 'fragments/tool/card-login.php'; ?>
             
             <!-- Upload do arquivo -->
-            <?php  include '../View/fragments/tool/card-upload.php'; ?>
+            <?php   ?>
             
             <!-- Editor -->
-            <?php  include '../View/fragments/tool/card-editor.php'; ?>
+            <?php 
+                if(!isset($_GET['edit'])){
+                   include '../View/fragments/tool/card-upload.php';
+                 } else{
+                     include '../View/fragments/tool/card-editor.php';
+                 }
+
+             ?>
 
         </div>
     </div>
