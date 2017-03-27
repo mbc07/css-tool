@@ -1,4 +1,4 @@
-<?php 
+ <?php 
 /** 
  * Write Output style.css.
  *
@@ -9,13 +9,10 @@
  * @since css-tool 2017-1
  * @link 
  */
-
  Class Writer
  {
  	private $element;
  	private $name;
-
-
  	function __construct($arrayElements, $name)
  	{
  		$this->element = $arrayElements;
@@ -38,7 +35,6 @@
  		{
  			if($base->id === $prev)
  				continue;
-
  			$index=0;
  			foreach($element as $value)
  			{
@@ -61,7 +57,6 @@
  				$this->fileOut($array);
  				$array = array();
  			}
-
  			$prev = $base->id;
  			$i++;
  		}
@@ -74,18 +69,14 @@
  	*/
  	private function fileOut($array)
  	{
-
  		$content = $array[0]->id."{ \r\n";
-
  		foreach($array as $css)
  		{
  			$content = $content."  ".$css->name.": ".$css->value.";\r\n";
  		}
-
  		$content = $content."} \r\n";
  		$this->writeFile($content);
  	}
-
  	/**
  	 * Metodo grava em arquivo.
  	 *
