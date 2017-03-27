@@ -55,7 +55,7 @@
 			break;
 
 		}
-		require_once '../View/fragments/footer.php';
+		
 		echo "</html>\n";
 	}
 	?>
