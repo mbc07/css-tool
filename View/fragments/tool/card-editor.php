@@ -59,11 +59,13 @@
         <div class="mdl-card__actions mdl-card--border app-tool-preview-card-bottom">
             <div class="app-tool-preview-card-text"><p><strong>Elemento selecionado:</strong> <span id="app-selected-element-text">nenhum</span></p>
             </div>
-
-            <button id="app-tool-download-button" 
+            <form action='../../../Controller/' method='post'>
+                <button type='submit' id="app-tool-download-button" 
                     class="mdl-button mdl-js-button 
                     mdl-button--raised mdl-js-ripple-effect 
-                    mdl-button--primary">Gerar CSS</button>
+                    mdl-button--primary">Gerar CSS
+                </button>
+            </form>
         </div>
     </div>
 </div>

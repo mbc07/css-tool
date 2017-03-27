@@ -47,6 +47,12 @@
 			case 'editFile':
 			$controller->editF();
 			break;
+			case '':
+			$controller->editF();
+			break;
+			default:
+			require_once '../View/index.php';
+			break;
 
 		}
 		require_once '../View/fragments/footer.php';
