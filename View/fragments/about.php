@@ -93,3 +93,5 @@
 		<p>Os usuários gerais deste aplicativo deve saber ler e escrever, uma experiência intermediária com computadores, fluência no idioma português (Brasil), conhecimento intermediário sobre o domínio e não há necessidade de experiência com um sistema similar. Além disso, principalmente, deve ter o interesse de aprender a como utilizar o aplicativo.</p>
 	</div>
 </div>
+
+<?php include 'footer.php';?>
