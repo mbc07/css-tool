@@ -9,13 +9,13 @@
                     ' href="#">Referências</button>
                     <button class='mdl-button mdl-js-button 
                     mdl-button--raised mdl-js-ripple-effect 
-                    'href="#">Git</button>
+                    'href="https://github.com/mbc07/css-tool/">Git</button>
                     <button class='mdl-button mdl-js-button 
                     mdl-button--raised mdl-js-ripple-effect 
-                    'href="#">UFMS</button>
+                    'href="https://www.ufms.br/">UFMS</button>
                     <button class='mdl-button mdl-js-button 
                     mdl-button--raised mdl-js-ripple-effect 
-                    'href="#">Time 7</button>
+                    'href="https://github.com/mbc07/css-tool/graphs/contributors">Time 7</button>
                 
             </div>
         </div>
