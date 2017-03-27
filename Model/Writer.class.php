@@ -23,7 +23,12 @@
  		$this->writeFile("Style Css Tool.\r\n");
  		$this->conf($this->element);
  	}
-
+ 	/**
+ 	 * Metodo faz a configuracao do valores do array.
+ 	 *
+ 	 * @param  ElementCss[] elemtn.
+ 	 *
+ 	*/
  	private function conf($element)
  	{
  		$array = array();
@@ -61,7 +66,12 @@
  			$i++;
  		}
  	}
-
+ 	/**
+ 	 * Metodo concatena conteudo que sera gravado.
+ 	 *
+ 	 * @param  ElementCss[] array.
+ 	 *
+ 	*/
  	private function fileOut($array)
  	{
 
@@ -76,6 +86,12 @@
  		$this->writeFile($content);
  	}
 
+ 	/**
+ 	 * Metodo grava em arquivo.
+ 	 *
+ 	 * @param  String Do que sera gravado no arquivo.
+ 	 *
+ 	*/
  	private function writeFile($content)
  	{
 	    $input = fopen('file/'.$this->name.".txt", "a");
