@@ -102,6 +102,7 @@ $(window).resize(updateIframeMinHeight);
 // na lista de seletores ao carregar a página
 $(document).ready(function () {
     $('#app-tool-tag-container').css('max-height', $(window).height() * 0.65);
+    clearEditor();
 
     $('#app-tool-iframe').on('load', function () {
         $('#app-tool-iframe').contents().find('*').each(function () {
@@ -121,3 +122,40 @@ function enableUnsavedChangesWarning() {
     return;
 }
 
+function loadElementIntoEditor(element) {
+    //$(element).
+}
+
+function clearEditor() {
+    // Aba Posição
+    var inputElements = '#margin #border #padding #z-index #left #right #top #bottom ';
+
+    // Aba Dimensões
+    inputElements = inputElements.concat('#width #height #min-width #min-height #max-width #max-height ');
+
+    // Aba Preenchimento
+    inputElements = inputElements.concat('#background-image ');
+
+    // Aba Texto
+    inputElements = inputElements.concat('#font-family #font-size #font-weight ');
+
+    var tmp = String(inputElements).split(' ');
+    for (var i = 0; i < tmp.length; i++) {
+        $(tmp[i]).val('');
+        $(tmp[i]).parent().removeClass('is-dirty');
+    }
+
+    $('input:radio').parent().removeClass('is-checked');
+    $('input:checkbox').parent().removeClass('is-checked');
+
+    $('input:radio').removeAttr('checked');
+    $('input:checkbox').removeAttr('checked');
+    
+    $('#background-color').val('#000000');
+    $('#app-button-background-color').prop('disabled', true);
+    
+    $('#color').val('#000000');
+    $('#app-button-color').prop('disabled', true);
+
+    return;
+}

@@ -37,23 +37,23 @@
         <p class="app-tool-editor-controls-header">Overflow</p>
         <div class="app-tool-editor-controls-container">
             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect app-tool-editor-controls-100" for="initial_d">
-                <input type="radio" id="initial_d" class="mdl-radio__button" name="overflow" value="1" checked>
+                <input type="radio" id="initial_d" class="mdl-radio__button" name="overflow" value="initial_d" checked>
                 <span class="mdl-radio__label">Inicial</span>
             </label><br/>
             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect app-tool-editor-controls-100" for="visible">
-                <input type="radio" id="visible" class="mdl-radio__button" name="overflow" value="2">
+                <input type="radio" id="visible" class="mdl-radio__button" name="overflow" value="visible">
                 <span class="mdl-radio__label">Visível</span>
             </label><br/>
             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect app-tool-editor-controls-100" for="hidden">
-                <input type="radio" id="hidden" class="mdl-radio__button" name="overflow" value="3">
+                <input type="radio" id="hidden" class="mdl-radio__button" name="overflow" value="hidden">
                 <span class="mdl-radio__label">Oculto</span>
             </label><br/>
             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect app-tool-editor-controls-100" for="scroll">
-                <input type="radio" id="scroll" class="mdl-radio__button" name="overflow" value="4">
+                <input type="radio" id="scroll" class="mdl-radio__button" name="overflow" value="scroll">
                 <span class="mdl-radio__label">Rolar</span>
             </label><br/>
             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect app-tool-editor-controls-100" for="auto">
-                <input type="radio" id="auto" class="mdl-radio__button" name="overflow" value="5">
+                <input type="radio" id="auto" class="mdl-radio__button" name="overflow" value="auto">
                 <span class="mdl-radio__label">Automático</span>
             </label>
         </div>

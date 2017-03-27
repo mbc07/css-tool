@@ -24,28 +24,28 @@
     <p class="app-tool-editor-controls-header app-tool-editor-controls-100">Repetição</p>
     <div class="app-tool-editor-controls-container">
         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="initial_b">
-            <input type="radio" id="initial_b" class="mdl-radio__button" name="background-repeat" value="1" checked>
+            <input type="radio" id="initial_b" class="mdl-radio__button" name="background-repeat" value="initial_b" checked>
             <span class="mdl-radio__label">Inicial (não definido)</span>
         </label><br/>
 
         <div class="app-tool-editor-controls-50">
             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="repeat-x">
-                <input type="radio" id="repeat-x" class="mdl-radio__button" name="background-repeat" value="2">
+                <input type="radio" id="repeat-x" class="mdl-radio__button" name="background-repeat" value="repeat-x">
                 <span class="mdl-radio__label">Horizontal</span>
             </label><br/>
             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="repeat-y">
-                <input type="radio" id="repeat-y" class="mdl-radio__button" name="background-repeat" value="3">
+                <input type="radio" id="repeat-y" class="mdl-radio__button" name="background-repeat" value="repeat-y">
                 <span class="mdl-radio__label">Vertical</span>
             </label>
         </div>
 
         <div class="app-tool-editor-controls-50">
             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="repeat">
-                <input type="radio" id="repeat" class="mdl-radio__button" name="background-repeat" value="4">
+                <input type="radio" id="repeat" class="mdl-radio__button" name="background-repeat" value="repeat">
                 <span class="mdl-radio__label">Ambos</span>
             </label><br/>
             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="no-repeat">
-                <input type="radio" id="no-repeat" class="mdl-radio__button" name="background-repeat" value="5">
+                <input type="radio" id="no-repeat" class="mdl-radio__button" name="background-repeat" value="no-repeat">
                 <span class="mdl-radio__label">Não Repetir</span>
             </label>
         </div>
