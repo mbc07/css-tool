@@ -27,7 +27,6 @@ class UserFactory extends AbstractFactory
         . $obj->getEmail() . "','"
         . $obj->getSenha() . "' " . ") ";
 
-        echo $sql;
 
         if($this->db->exec($sql))
             return true;

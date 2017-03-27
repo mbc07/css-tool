@@ -4,11 +4,8 @@
 */
 	if(isset($_GET['url']))
 		constructPage($_GET['url']);
-
 	else 
 		constructPage('index');
-
-
 /**
 	* Funcao que trata a solicitacao da pagina que chama.
 */
@@ -17,11 +14,9 @@
 		session_start(); 
 		echo "<!DOCTYPE html>\n\n";
 		echo "<html>";
-
 		require_once 'config.php';
 		require_once '../View/fragments/head.php';
 		require_once '../Controller/controller.php';
-
 		$controller = new Controller();
 		
 		switch($url)
@@ -47,12 +42,14 @@
 			case 'editFile':
 			$controller->editF();
 			break;
+			case '':
+			$controller->editF();
+			break;
 			default:
 			require_once '../View/index.php';
 			break;
-
 		}
-		//require_once '../View/fragments/footer.php';
+		
 		echo "</html>\n";
 	}
 	?>
