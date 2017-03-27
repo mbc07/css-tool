@@ -27,6 +27,7 @@ function selectedElementText(element) {
         $('#app-editor-controls').slideToggle(250);
     }
 
+    loadElementIntoEditor(element);
     return;
 }
 
@@ -102,7 +103,6 @@ $(window).resize(updateIframeMinHeight);
 // na lista de seletores ao carregar a página
 $(document).ready(function () {
     $('#app-tool-tag-container').css('max-height', $(window).height() * 0.65);
-    clearEditor();
 
     $('#app-tool-iframe').on('load', function () {
         $('#app-tool-iframe').contents().find('*').each(function () {
@@ -123,7 +123,50 @@ function enableUnsavedChangesWarning() {
 }
 
 function loadElementIntoEditor(element) {
-    //$(element).
+    clearEditor();
+
+    updateMDLInput($('#margin'), $(element).css('margin'));
+    updateMDLInput($('#border'), $(element).css('boder'));
+    updateMDLInput($('#padding'), $(element).css('padding'));
+    updateMDLInput($('#z-index'), $(element).css('z-index'));
+    updateMDLInput($('#left'), $(element).css('left'));
+    updateMDLInput($('#right'), $(element).css('right'));
+    updateMDLInput($('#top'), $(element).css('top'));
+    updateMDLInput($('#bottom'), $(element).css('bottom'));
+    
+    updateMDLInput($('#width'), $(element).css('width'));
+    updateMDLInput($('#height'), $(element).css('height'));
+    updateMDLInput($('#min-width'), $(element).css('min-width'));
+    updateMDLInput($('#min-height'), $(element).css('min-height'));
+    updateMDLInput($('#max-width'), $(element).css('max-width'));
+    updateMDLInput($('#max-height'), $(element).css('max-height'));
+    
+    updateMDLInput($('#background-image'), $(element).css('background-image'));
+    updateMDLInput($('#background-color'), $(element).css('background-color'));
+    
+    updateMDLInput($('#color'), $(element).css('color'));
+    updateMDLInput($('#font-family'), $(element).css('font-family'));
+    updateMDLInput($('#font-size'), $(element).css('font-size'));
+    updateMDLInput($('#font-weight'), $(element).css('font-weight'));
+    
+}
+
+function updateMDLInput(element, value) {
+    if (value) {
+        element.val(String(value));
+        element.parent().addClass('is-dirty');
+    }
+
+    return;
+}
+
+function updateMDLRadio(name, value) {
+    if (value) {
+        $('[name='+name+']').find(value).addAttr('checked', true);
+        $('[name='+name+']').find(value).parent().addClass('is-checked');
+    }
+
+    return;
 }
 
 function clearEditor() {
@@ -150,12 +193,34 @@ function clearEditor() {
 
     $('input:radio').removeAttr('checked');
     $('input:checkbox').removeAttr('checked');
-    
+
     $('#background-color').val('#000000');
     $('#app-button-background-color').prop('disabled', true);
-    
+
     $('#color').val('#000000');
     $('#app-button-color').prop('disabled', true);
 
     return;
 }
+
+/*
+ $('#color').on('input propertychange', function () {
+ $('#app-button-color').prop('disabled', false);
+ });
+ 
+ $('#background-color').change(function () {
+ $('#app-button-background-color').prop('disabled', false);
+ });
+ 
+ $('#app-button-color').click(function () {
+ alert('trigger');
+ $('#color').val('#000000');
+ $('#app-button-color').prop('disabled', true);
+ });
+ 
+ $('#app-button-background-color').click(function () {
+ $('#background-color').val('#000000');
+ $('#app-button-background-color').prop('disabled', true);
+ });
+ 
+ */
