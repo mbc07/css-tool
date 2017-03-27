@@ -201,7 +201,7 @@ public function reset() {
         if($nome == "" || $email == ""){
             $msg =  "<strong>Preencha</strong> todos os campos!";
         }else if (!$usuario) {
-            $msg =  "O usuário n&atilde;o foi adicionado. E-mail j&aacute; cadastrado!";
+            $msg =  "O <strong>E-mail</strong> fornecido por você é inexistente!";
         } else if ($senha != $senhac) {
             $msg = "<strong>Erro:</strong> As senhas não se conferem!";
         }else if ($usuario->nome != $nome) {
