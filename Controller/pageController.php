@@ -39,12 +39,6 @@
 			case 'upFile':
 			$controller->up();
 			break;
-			case 'editFile':
-			$controller->editF();
-			break;
-			case '':
-			$controller->editF();
-			break;
 			default:
 			require_once '../View/index.php';
 			break;
