@@ -1,5 +1,10 @@
 
-
+<?php 
+    if(!isset($_GET['file']))
+        header('Location: ?url=index');
+    
+    $file = $_GET['file'];
+?>
 <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
         <?php include "View/fragments/navbar.php"; ?>
@@ -10,15 +15,16 @@
 
                     <div class="mdl-grid">
     					<div class="mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--12-col app-common-content-card">	
-    					<div class="navbar-collapse collapse" id="footer-body">
-                    <ul class="nav navbar-nav">
-                        <li><a href="#">Referencias</a></li>
-                        <li><a href="#">Git</a></li>
-                        <li><a href="#">UFMS</a></li>
-                        <li><a href="#">Time 7</a></li>
-                    </ul>
-                </div>
-	       					<a class='btn' href="Model/file/d.txt" download="Acme Documentation (ver. 2.0.1).txt">Download Text</a>
+    					   <div class="navbar-collapse collapse" id="footer-body">
+                                <ul class="nav navbar-nav">
+                                   
+                                    <li>
+                                        <a class='btn' href="Model/file/<?php echo $file;?>.css" download="Acme Documentation (ver. 2.0.1).css">
+                                            Download Css
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
 	    			
             			</div>
             		</div>

@@ -55,6 +55,7 @@ class Controller {
                 $this->upload();
                 break;
             case 'download':
+                $this->tool();
                 $this->download();
                 break;
             default:
@@ -258,7 +259,21 @@ class Controller {
 
     private function download()
     {
-       require_once 'View/fragments/download.php';
+        $manager = new FileManager();
+        //realiza a função de leitura de arquivo definido no FileManager.class.php
+        $file = $manager->generatorHash($_SESSION['id_usuario'])
+
+        require_once "View/fragments/download.php?file=$file";
+    }
+
+
+     private function tool()
+    {
+        $manager = new FileManager();
+        $writer = new Writer();
+
+
+        require_once "View/fragments/download.php?file=$file";
     }
 
 
