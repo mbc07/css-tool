@@ -1,6 +1,7 @@
  
 <div class="mdl-grid">
     <div class="mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--12-col app-common-content-card">
+       <img src="View/assets/img/CSStool-F.png" alt="<?php echo APP_NAME ?>" style="float:right;">
         <h2>Introdução</h2>
 
         <h3>Objetivo</h3>
@@ -42,8 +43,8 @@
         <p>Atualmente pela facilidade e comodidade do uso de frameworks, a tradicional e fascinante habilidade de criação manual do design visual foi perdida. Além disso, para os desenvolvedores iniciais ter a difícil tarefa em desenvolver o HTML e CSS juntos ao aprendizado o torna custoso, assim como para desenvolvedores experientes ter que sempre estarem atualizando seus conhecimentos em CSS e descobrindo toda a capacidade  apenas pela necessidade; com esses fatores hoje se tem apresentação de mais um profissional o design CSS, isso torna oneroso o desenvolvimento principalmente no desenvolvimento ágil em que o profissional deve ser multidisciplinar.</p>
         <p>Assim, havendo conhecimento e motivado nesse fato vem o interesse na criação de uma aplicação web, que permita o desenvolvedor entender as necessidades de sua página HTML (posicionamento das partes, designe único de background, imagem, fonte, tabela e etc) e através desse entendimento criar em alto nível da sua página CSS, dessa forma o desenvolvedor teria o processo de desenvolvimento com maior definição (HTML depois CSS depois etc).</p>
 
-        <h2>Descrição Geral</h2>
-        <h3>Requisitos funcionais</h3>
+        <h3>Descrição Geral</h3>
+        <h4>Requisitos funcionais</h4>
         <ul>
             <li>Upload de arquivo HTML:  local de upload do HTML, para edição que será feita posteriormente.</li>
             <li>Criar CSS Personalizado: a partir da seleção das funções do CSS, esta funcionalidade gerará um arquivo CSS.</li>
@@ -57,7 +58,7 @@
             <li>Criar HTML 5 Básico e CSS Personalizado: esta funcionalidade permite que o usuário na inserção de apenas o conteúdo, o aplicativo gera um HTML 5 e um CSS básico.</li>
         </ul>
 
-        <h3>Requisitos não-funcionais</h3>
+        <h4>Requisitos não-funcionais</h4>
         <ul>
             <li>Interfaces de Usuário</li>
             <ul>
@@ -85,11 +86,11 @@
                 </ul>
             </ul>
         </ul>
-        <h3>Requisitos de conteúdo</h3>
+        <h4>Requisitos de conteúdo</h4>
         <p>O site deve conter um link de ajuda, na qual direciona para um documento que explica como o usuário deve utilizar o aplicativo. Além da descrição básica de cada funcionalidade disponível na interface do site.</p>
-        <h3>Requisitos de interação</h3>
+        <h4>Requisitos de interação</h4>
         <p>O usuário utilizará o site por meio do pressionar de botões para selecionar a funcionalidade, como upload de arquivos HTML ou as opções disponíveis de personalização do CSS, e digitação para definir as características da personalização.</p>
-        <h3>Características dos usuários</h3>
+        <h4>Características dos usuários</h4>
         <p>Os usuários gerais deste aplicativo deve saber ler e escrever, uma experiência intermediária com computadores, fluência no idioma português (Brasil), conhecimento intermediário sobre o domínio e não há necessidade de experiência com um sistema similar. Além disso, principalmente, deve ter o interesse de aprender a como utilizar o aplicativo.</p>
     </div>
 </div>
