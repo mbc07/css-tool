@@ -113,7 +113,7 @@ class Controller {
                 unset($senha);
                 unset($senhac);
 
-                require '../View/mensagem.php';
+                require 'View/mensagem.php';
             } catch (Exception $e) {
                 if ($nome == "") {
                     $msg = "O campo <strong>Nome</strong> deve ser preenchido!";
@@ -122,7 +122,7 @@ class Controller {
                 } else if ($senha != $senhac) {
                     $msg = "<strong>Erro:</strong> As senhas não se conferem!";
                 }
-                require '../View/mensagem.php';
+                require 'View/mensagem.php';
             }
         }
     }
@@ -140,7 +140,7 @@ class Controller {
         // Usuário não forneceu a senha ou o login 
         if (!$login || !$senha) {
             $msg = "<strong>Preencha</strong> todos os campos!";
-            require '../View/mensagem.php';
+            require 'View/mensagem.php';
             exit;
         }
 
@@ -150,7 +150,7 @@ class Controller {
         //Verifica se a busca não retornou um usuário na BD
         if (!$usuario) {
             $msg = "O <strong>Login</strong> fornecido por você é inexistente!";
-            require '../View/mensagem.php';
+            require 'View/mensagem.php';
             exit;
         }
 
@@ -161,12 +161,12 @@ class Controller {
             // Usuario/Senha correta 
             $_SESSION["id_usuario"] = $usuario->email;
             $_SESSION["nome_usuario"] = $usuario->nome;
-            echo '<script>location.href="pageController.php?url=index";</script>';
+            echo '<script>location.href="?url=index";</script>';
             exit;
         } else {
             // Usuario/Senha incorreta
             $msg = "<strong>Senha</strong> inválida!";
-            require '../View/mensagem.php';
+            require 'View/mensagem.php';
             exit;
         }
     }
@@ -176,7 +176,7 @@ class Controller {
      */
     public function logout() {
         session_destroy();
-        echo '<script>location.href="pageController.php?url=index";</script>';
+        echo '<script>location.href="?url=index";</script>';
     }
 
     /**

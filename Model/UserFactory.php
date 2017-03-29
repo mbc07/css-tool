@@ -82,9 +82,9 @@ class UserFactory extends AbstractFactory {
 
         $sql = "UPDATE " . $this->nometabela . " SET nome = '" . $nome . "', senha = '" . $senha . "', email = '" . $email . "' WHERE id = '" . $id . "'";
 
-        if ($this->db->exec($sql))
+        if ($this->db->exec($sql)) {
             return true;
-        else
+        } else
             return false;
     }
 
