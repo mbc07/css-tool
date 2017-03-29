@@ -1,8 +1,8 @@
 <div class="mdl-grid">
     <div class="mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--12-col app-common-content-card">
-        <h3>CSS Auto Generator - Gerador automático CSS</h3>
+        <h3>Editor visual CSS</h3>
         <p>
-            Gera uma folha de estilos CSS de acordo com a formatação feita pelo usuário (Ex. Centralizar div, alterar cor de table para Black). 
+            Gera uma folha de estilos CSS de acordo com a formatação feita pelo usuário. 
         </p>
         <p>
             O produto, depois do processo do cadastramento do usuário e login para permissão do uso da ferramenta, tem a funcionalidade de

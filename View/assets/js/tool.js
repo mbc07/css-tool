@@ -1,6 +1,7 @@
 // Arrays contendo os elementos editados
 var editedElements = [];
 var selectedElementIndex = null;
+var unsavedChanges = false;
 
 
 function updateIframeMinHeight() {
@@ -32,8 +33,10 @@ function updateSelectedElement(element) {
         $('#app-editor-controls').slideToggle(250);
     }
 
-    if (selectedElementIndex)
+    if (selectedElementIndex) {
+        enableUnsavedChangesWarning();
         saveEditedElement(selectedElementIndex);
+    }
 
     checkEditedElements(element);
     return;
@@ -124,9 +127,12 @@ $(document).ready(function () {
 });
 
 function enableUnsavedChangesWarning() {
-    $(window).on('beforeunload', function () {
-        return 'Suas alterações serão perdidas!';
-    });
+    if (!unsavedChanges) {
+        $(window).on('beforeunload', function () {
+            return 'Suas alterações serão perdidas!';
+        });
+        unsavedChanges = true;
+    }
     return;
 }
 
