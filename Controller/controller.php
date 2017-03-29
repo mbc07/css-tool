@@ -1,7 +1,10 @@
 <?php
 
+
 require_once "Model/User.class.php";
 require_once "Model/UserFactory.php";
+require_once "Model/Writer.class.php";
+require_once "Model/CssElement.class.php";
 require_once "Model/FileManager.class.php";
 
 
@@ -18,13 +21,19 @@ require_once "Model/FileManager.class.php";
 class Controller {
 
     private $factory;
+    private $manager;
 
     function __construct() {
-
         $this->factory = new UserFactory();
 
         ini_set('error_reporting', E_ALL);
         ini_set('display_errors', 1);
+    }
+
+    private function instance()
+    {
+        if($this->manager == null)
+            $this->manager = new FileManager();
     }
 
     /**
@@ -52,9 +61,11 @@ class Controller {
                 $this->reset();
                 break;
             case 'upload':
+                $this->instance();
                 $this->upload();
                 break;
             case 'download':
+                $this->instance();
                 $this->tool();
                 $this->download();
                 break;
@@ -252,16 +263,15 @@ class Controller {
      */
     public function upload() {
 
-        $file = new FileManager();
         //realiza a função de leitura de arquivo definido no FileManager.class.php
-        $file->op($_SESSION["id_usuario"], 0);
+        $this->manager->op($_SESSION["id_usuario"], 0);
     }
 
     private function download()
     {
-        $manager = new FileManager();
+      
         //realiza a função de leitura de arquivo definido no FileManager.class.php
-        $file = $manager->generatorHash($_SESSION['id_usuario'])
+        $file = $this->manager->generatorHash($_SESSION['id_usuario']);
 
         require_once "View/fragments/download.php?file=$file";
     }
@@ -269,11 +279,13 @@ class Controller {
 
      private function tool()
     {
-        $manager = new FileManager();
-        $writer = new Writer();
-
-
-        require_once "View/fragments/download.php?file=$file";
+        $array = array();
+        array_push($array, new CssElement('bck1', '#FFF', '.class'));
+        array_push($array, new CssElement('bck2', '#CCC', 'div'));
+        array_push($array, new CssElement('bck3', '#DDD', '.class'));
+        array_push($array, new CssElement('bck4', '#EEE', 'div'));
+        array_push($array, new CssElement('bck5', '#999', '.class'));
+        $writer = new Writer($array, $this->manager->generatorHash($_SESSION['id_usuario']));
     }
 
 

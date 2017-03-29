@@ -12,9 +12,9 @@
  */
 Class CssElement {
 
-    private $name;
-    private $value;
-    private $id;
+    public $name;
+    public $value;
+    public $id;
 
     function __construct($name, $value, $id) {
         $this->name = $name;
