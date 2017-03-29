@@ -1,3 +1,7 @@
+// Arrays contendo os elementos editados
+var editedElements = [];
+
+
 function updateIframeMinHeight() {
     var iframe = $('#app-tool-iframe');
     var container = $('#app-iframe-container');
@@ -27,7 +31,7 @@ function updateSelectedElement(element) {
         $('#app-editor-controls').slideToggle(250);
     }
 
-    loadElementIntoEditor(element);
+    checkEditedElements(element);
     return;
 }
 
@@ -122,46 +126,102 @@ function enableUnsavedChangesWarning() {
     return;
 }
 
-function loadElementIntoEditor(element) {
+function loadElementIntoEditor(i) {
     clearEditor();
-    element = $(element);
 
-    updateMDLInput($('#margin'),  element.css('margin'));
-    updateMDLInput($('#border'),  element.css('boder'));
-    updateMDLInput($('#padding'), element.css('padding'));
-    updateMDLInput($('#z-index'), element.css('z-index'));
-    updateMDLInput($('#left'),    element.css('left'));
-    updateMDLInput($('#right'),   element.css('right'));
-    updateMDLInput($('#top'),     element.css('top'));
-    updateMDLInput($('#bottom'),  element.css('bottom'));
+    updateMDLInput($('#margin'), editedElements[i].margin);
+    updateMDLInput($('#border'), editedElements[i].border);
+    updateMDLInput($('#padding'), editedElements[i].padding);
+    updateMDLInput($('#z-index'), editedElements[i].zindex);
+    updateMDLInput($('#left'), editedElements[i].left);
+    updateMDLInput($('#right'), editedElements[i].right);
+    updateMDLInput($('#top'), editedElements[i].top);
+    updateMDLInput($('#bottom'), editedElements[i].bottom);
 
-    updateMDLInput($('#width'),      element.css('width'));
-    updateMDLInput($('#height'),     element.css('height'));
-    updateMDLInput($('#min-width'),  element.css('min-width'));
-    updateMDLInput($('#min-height'), element.css('min-height'));
-    updateMDLInput($('#max-width'),  element.css('max-width'));
-    updateMDLInput($('#max-height'), element.css('max-height'));
+    updateMDLInput($('#width'), editedElements[i].width);
+    updateMDLInput($('#height'), editedElements[i].height);
+    updateMDLInput($('#min-width'), editedElements[i].minwidth);
+    updateMDLInput($('#min-height'), editedElements[i].minheight);
+    updateMDLInput($('#max-width'), editedElements[i].maxwidth);
+    updateMDLInput($('#max-height'), editedElements[i].maxheight);
 
-    updateMDLInput($('#background-image'), element.css('background-image'));
-    updateMDLInput($('#background-color'), element.css('background-color'));
+    updateMDLInput($('#background-image'), editedElements[i].backgroundimage);
+    updateMDLInput($('#background-color'), editedElements[i].backgroundcolor);
 
-    updateMDLInput($('#color'),       element.css('color'));
-    updateMDLInput($('#font-family'), element.css('font-family'));
-    updateMDLInput($('#font-size'),   element.css('font-size'));
-    updateMDLInput($('#font-weight'), element.css('font-weight'));
-    
-    updateMDLRadio('position',           element.css('position'));
-    updateMDLRadio('overflow',           element.css('overflow'));
-    updateMDLRadio('background-repeat',  element.css('background-repeat'));
-    updateMDLRadio('font-style',         element.css('font-style'));
-    updateMDLRadio('text-align',         element.css('text-align'));
-    updateMDLRadio('text-decoration',    element.css('text-decoration'));
-    
-    if (element.css('font-variant') == 'small-caps') {
+    updateMDLInput($('#color'), editedElements[i].color);
+    updateMDLInput($('#font-family'), editedElements[i].fontfamily);
+    updateMDLInput($('#font-size'), editedElements[i].fontsize);
+    updateMDLInput($('#font-weight'), editedElements[i].fontweight);
+
+    updateMDLRadio('position', editedElements[i].position);
+    updateMDLRadio('overflow', editedElements[i].overflow);
+    updateMDLRadio('background-repeat', editedElements[i].backgroundrepeat);
+    updateMDLRadio('font-style', editedElements[i].fontstyle);
+    updateMDLRadio('text-align', editedElements[i].textalign);
+    updateMDLRadio('text-decoration', editedElements[i].textdecoration);
+
+    if (editedElements[i].fontvariant == 'small-caps') {
         $('#small-caps').prop('checked', true);
         $('#small-caps').parent().addClass('is-checked');
     }
 
+}
+
+function saveEditedElement(i) {
+    editedElements[i].margin = $('#margin').val();
+    editedElements[i].border = $('#border').val();
+    editedElements[i].padding = $('#padding').val();
+    editedElements[i].zindex = $('#z-index').val();
+    editedElements[i].left = $('#left').val();
+    editedElements[i].right = $('#right').val();
+    editedElements[i].top = $('#top').val();
+    editedElements[i].bottom = $('#bottom').val();
+
+    editedElements[i].width = $('#width').val();
+    editedElements[i].height = $('#height').val();
+    editedElements[i].minwidth = $('#min-width').val();
+    editedElements[i].minheight = $('#min-height').val();
+    editedElements[i].maxwidth = $('#max-width').val();
+    editedElements[i].maxheight = $('#max-height').val();
+
+    editedElements[i].backgroundimage = $('#background-image').val();
+    editedElements[i].backgroundcolor = $('#background-color').val();
+
+    editedElements[i].color = $('#color').val();
+    editedElements[i].fontfamily = $('#font-family').val();
+    editedElements[i].fontsize = $('#font-size').val();
+    editedElements[i].fontweight = $('#font-weight').val();
+
+    editedElements[i].position = $('input[name=position]:checked').val();
+    editedElements[i].overflow = $('input[name=overflow]:checked').val();
+    editedElements[i].backgroundrepeat = $('input[name=background-repeat]:checked').val();
+    editedElements[i].fontstyle = $('input[name=font-style]:checked').val();
+    editedElements[i].textalign = $('input[name=text-align]:checked').val();
+    editedElements[i].textdecoration = $('input[name=text-decoration]:checked').val();
+}
+
+function checkEditedElements(selector) {
+    var index = null;
+
+    for (var i = 0; i < editedElements.length; i++)
+    {
+        if (editedElements[i].id == selector) {
+            saveEditedElement(i);
+            loadElementIntoEditor(i);
+            return;
+        }
+    }
+
+    var newElement = {id: selector, margin: '', border: '', padding: '', zindex: '',
+        left: '', right: '', top: '', bottom: '', width: '', height: '', minwidth: '',
+        minheight: '', maxwidth: '', maxheight: '', backgroundcolor: '', backgroundimage: '',
+        color: '', fontfamilly: '', fontsize: '', fontweight: '', position: '', overflow: '',
+        backgroundrepeat: '', fontstyle: '', textalign: '', textdecoration: '', fontvariant: ''};
+    index = editedElements.push(newElement);
+
+    loadElementIntoEditor(index - 1);
+
+    return;
 }
 
 // Atualiza o valor do campo informado
@@ -227,7 +287,7 @@ function updateMDLRadio(group, value) {
                     var tmp = String(value).split(' ');
                     value = tmp[0];
                 }
-                
+
                 if (value == 'initial')
                     target = $('#initial_f2');
                 else
@@ -303,3 +363,4 @@ function editorBackButton() {
     window.location = '?url=index';
     return;
 }
+
