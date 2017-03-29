@@ -51,7 +51,7 @@
             </div>
 
             <div id="app-iframe-container" class="mdl-cell mdl-cell--6-col mdl-card mdl-card--expand mdl-shadow--2dp">
-                <iframe id="app-tool-iframe" class="app-tool-preview-iframe" src="Model/uploads/<?php echo md5(trim($_SESSION["id_usuario"])); ?>.html"></iframe>
+                <iframe id="app-tool-iframe" class="app-tool-preview-iframe" src="Model/uploads/<?php echo md5(trim($_SESSION['id_usuario'])); ?>.html"></iframe>
             </div>
         </div>
 

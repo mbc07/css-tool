@@ -213,7 +213,7 @@ class Controller {
                 $senha = md5($senha);
 
                 //realiza a função de update definida no UserFactory.php
-                $sucesso = $this->factory->update($usuario->nome, $usuario->email, $senha, $usuario->id);
+                $sucesso = $this->factory->update($usuario->email, $senha);
 
                 //Definindo a mensagem que irá exibir dependendo do $sucesso
                 if ($sucesso) {

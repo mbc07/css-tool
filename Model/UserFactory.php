@@ -78,9 +78,11 @@ class UserFactory extends AbstractFactory {
      * @param String $id - id do usuário
      * @return  true se executar o update ou false se não executar
      */
-    public function update($nome, $email, $senha, $id) {
+    public function update($email, $senha) {
 
-        $sql = "UPDATE " . $this->nometabela . " SET nome = '" . $nome . "', senha = '" . $senha . "', email = '" . $email . "' WHERE id = '" . $id . "'";
+        $result = $this->buscarL($email);
+
+        $sql = "UPDATE " . $this->nometabela . " SET nome = '" . $result->nome . "', senha = '" . $senha . "', email = '" . $email . "' WHERE id = '" . $result->id . "'";
 
         if ($this->db->exec($sql)) {
             return true;
