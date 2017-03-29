@@ -11,7 +11,7 @@
  * @link 
  */
 define('APP_NAME', 'CSS Tool');
-define('APP_VERSION', '1.0');
+define('APP_VERSION', '0.9');
 define('APP_DEBUG_CSS', false);
 define('APP_DEBUG_JS', true);
 define('JQUERY_VERSION', 'jquery-3.2.0');

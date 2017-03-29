@@ -19,8 +19,8 @@
                                 <ul class="nav navbar-nav">
                                    
                                     <li>
-                                        <a class='btn' href="Model/file/<?php echo $file;?>.css" download="Acme Documentation (ver. 2.0.1).css">
-                                            Download Css
+                                        <a class='btn' href="Model/file/<?php echo $file;?>.css" download="<?php echo $_SESSION['nome_usuario'];?>.css">
+                                            Baixar folha de estilos
                                         </a>
                                     </li>
                                 </ul>
