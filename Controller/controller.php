@@ -256,9 +256,9 @@ class Controller {
         $file->op($_SESSION["id_usuario"], 0);
     }
 
-    public function download() {
-
-        
+    private function download()
+    {
+       require_once 'View/fragments/download.php';
     }
 
 
