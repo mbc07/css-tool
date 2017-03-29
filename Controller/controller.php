@@ -271,9 +271,9 @@ class Controller {
     {
       
         //realiza a função de leitura de arquivo definido no FileManager.class.php
-        $file = $this->manager->generatorHash($_SESSION['id_usuario']);
+        $_SESSION['file'] = $this->manager->generatorHash($_SESSION['id_usuario']);
 
-        require_once "View/fragments/download.php?file=$file";
+        require_once "View/fragments/download.php";
     }
 
 
@@ -281,10 +281,10 @@ class Controller {
     {
         $array = array();
         array_push($array, new CssElement('bck1', '#FFF', '.class'));
-        array_push($array, new CssElement('bck2', '#CCC', 'div'));
+        array_push($array, new CssElement('bck2', '#CCC', '.class'));
         array_push($array, new CssElement('bck3', '#DDD', '.class'));
         array_push($array, new CssElement('bck4', '#EEE', 'div'));
-        array_push($array, new CssElement('bck5', '#999', '.class'));
+        array_push($array, new CssElement('bck5', '#999', 'div'));
         $writer = new Writer($array, $this->manager->generatorHash($_SESSION['id_usuario']));
     }
 

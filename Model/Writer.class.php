@@ -33,36 +33,31 @@ Class Writer {
     {
         $array = array();
         $prev = null;
-        $k=0;
-        $i=0;
-        for ($size=sizeof($element); $k < $size; $k++) 
+        $index;
+        $i = 0;
+        foreach ($element as $base) 
         {
-            $base = $element[$k];
-
             if ($base->id === $prev)
                 continue;
-
-            for (; $i < $size; $i++) 
+            $index = 0;
+            foreach ($element as $value) 
             {
-                $value = $element[$i];
 
                 if ($base->id === $value->id) 
                 {
                     array_push($array, $value);
-                    unset($element[$i]);
-                    $i--;
-                    $size--;
+                    unset($element[$index]);
                 }
+                $index++;
             }
-            
-            array_push($array, $base);
-            unset($element[$k]);
-            $k--;
-            $size--;
-            $this->fileOut($array);
-            $array = array();
-            
+            if ($array != null) 
+            {
+                $this->fileOut($array);
+                $array = array();
+            }
+            unset($element[$i]);
             $prev = $base->id;
+            $i++;
         }
     }
 

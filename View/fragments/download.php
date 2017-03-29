@@ -1,9 +1,9 @@
 
 <?php 
-    if(!isset($_GET['file']))
+    if(!isset($_SESSION['file']))
         header('Location: ?url=index');
     
-    $file = $_GET['file'];
+    $file = $_SESSION['file'];
 ?>
 <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
