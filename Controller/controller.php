@@ -9,8 +9,10 @@ require_once "Model/FileManager.class.php";
  * 
  * Classe controladora que define gerencia do fluxo da aplicação.
  *
+ * @author Gian
  * @author Jonathan
- * @version 1.0 - 26/Mar/2017
+ * @author Mateus
+ * @version 2.0 - 29/Mar/2017
  */
 
 class Controller {
@@ -38,19 +40,19 @@ class Controller {
 
         switch ($url) {
             case 'register':
-                $controller->register();
+                $this->register();
                 break;
             case 'login':
-                $controller->login();
+                $this->login();
                 break;
             case 'logout':
-                $controller->logout();
+                $this->logout();
                 break;
             case 'reset':
-                $controller->reset();
+                $this->reset();
                 break;
             case 'upload':
-                $controller->upload();
+                $this->upload();
                 break;
             default:
                 require_once "View/main.php";
@@ -113,7 +115,7 @@ class Controller {
                 unset($senha);
                 unset($senhac);
 
-                require 'View/mensagem.php';
+                require 'View/message.php';
             } catch (Exception $e) {
                 if ($nome == "") {
                     $msg = "O campo <strong>Nome</strong> deve ser preenchido!";
@@ -122,7 +124,7 @@ class Controller {
                 } else if ($senha != $senhac) {
                     $msg = "<strong>Erro:</strong> As senhas não se conferem!";
                 }
-                require 'View/mensagem.php';
+                require 'View/message.php';
             }
         }
     }
@@ -140,7 +142,7 @@ class Controller {
         // Usuário não forneceu a senha ou o login 
         if (!$login || !$senha) {
             $msg = "<strong>Preencha</strong> todos os campos!";
-            require 'View/mensagem.php';
+            require 'View/message.php';
             exit;
         }
 
@@ -150,7 +152,7 @@ class Controller {
         //Verifica se a busca não retornou um usuário na BD
         if (!$usuario) {
             $msg = "O <strong>Login</strong> fornecido por você é inexistente!";
-            require 'View/mensagem.php';
+            require 'View/message.php';
             exit;
         }
 
@@ -166,7 +168,7 @@ class Controller {
         } else {
             // Usuario/Senha incorreta
             $msg = "<strong>Senha</strong> inválida!";
-            require 'View/mensagem.php';
+            require 'View/message.php';
             exit;
         }
     }
@@ -225,7 +227,7 @@ class Controller {
                 unset($senha);
                 unset($senhac);
 
-                require '../View/mensagem.php';
+                require 'View/message.php';
             } catch (Exception $e) {
                 if ($nome == "" || $email == "") {
                     $msg = "<strong>Preencha</strong> todos os campos!";
@@ -236,7 +238,7 @@ class Controller {
                 } else if ($usuario->nome != $nome) {
                     $msg = "O <strong>Nome</strong> não condiz com o <strong>E-mail</strong>";
                 }
-                require '../View/mensagem.php';
+                require 'View/message.php';
             }
         }
     }

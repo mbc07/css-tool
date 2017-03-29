@@ -102,7 +102,7 @@ $(window).resize(updateIframeMinHeight);
 // Escaneia e adiciona todos os elementos do iframe 
 // na lista de seletores ao carregar a página
 $(document).ready(function () {
-    $('#app-tool-tag-container').css('max-height', $(window).height() * 0.65);
+    $('#app-tool-tag-container').css('max-height', $(window).height() * 0.85);
 
     $('#app-tool-iframe').on('load', function () {
         $('#app-tool-iframe').contents().find('*').each(function () {
@@ -224,3 +224,8 @@ function clearEditor() {
  });
  
  */
+
+function editorBackButton() {
+    window.location = '?url=index';
+    return;
+}

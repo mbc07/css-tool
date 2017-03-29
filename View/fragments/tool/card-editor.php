@@ -1,9 +1,7 @@
-<?php ?>
-
 <div class="mdl-cell mdl-cell--4-col">
     <div class="mdl-color-text--grey-800 app-tool-editor-header">
-        <button id="app-editor-back-button" class="mdl-button mdl-js-button mdl-button--icon"><a href="?url=index">
-                <i class="material-icons">arrow_back</i></a>
+        <button id="app-editor-back-button" onclick="editorBackButton();" class="mdl-button mdl-js-button mdl-button--icon">
+                <i class="material-icons">arrow_back</i>
         </button>
         <div class="mdl-tooltip" for="app-editor-back-button">
             Suas alterações<br>serão perdidas!
@@ -37,6 +35,7 @@
             </div>
         </div>
     </div>
+    <div class="app-common-footer-spacer"></div>
 </div>
 
 <div class="mdl-cell mdl-cell--8-col">
@@ -52,12 +51,7 @@
             </div>
 
             <div id="app-iframe-container" class="mdl-cell mdl-cell--6-col mdl-card mdl-card--expand mdl-shadow--2dp">
-                <iframe id="app-tool-iframe" class="app-tool-preview-iframe" ></iframe>
-                <script>
-                    var hash = CryptoJS.MD5($('.app-account-card-user-details > h2').text());
-                    $('#app-tool-iframe').attr('src', 'Model/uploads/' + hash + '.html');
-                </script>
-
+                <iframe id="app-tool-iframe" class="app-tool-preview-iframe" src="Model/uploads/<?php echo md5(trim($_SESSION["id_usuario"])); ?>.html"></iframe>
             </div>
         </div>
 

@@ -16,19 +16,23 @@
         <span class="mdl-layout-title"><?= APP_NAME ?></span>
         <div class="mdl-layout-spacer"></div>
         <button id="app-account-button" onclick="toggleAccountMenu(); return false;" class="mdl-button mdl-js-button mdl-button--icon app-navbar-account-button">
-            <!--*******************************************************
-                IMAGEM A SER MOSTRADA QUANDO O USUÁRIO ESTÁ LOGADO 
-                *******************************************************
-            <img id="app-account-button" src="https://www.gravatar.com/avatar/<hash md5 do email>?d=identicon"> 
-            -->
-            <i id="app-account-button" class="material-icons">account_circle</i>
+             <?php
+            // Verifica se existe os dados da sessão de login 
+            if (!isset($_SESSION["id_usuario"]) || !isset($_SESSION["nome_usuario"])) {
+                //Usuário não logado
+                echo '<i id="app-account-button" class="material-icons">account_circle</i>';
+            } else {
+                //Usuário logado
+                echo '<img id="app-account-button" src="https://www.gravatar.com/avatar/' . md5(trim($_SESSION["id_usuario"])) . '?d=identicon">';
+            }
+            ?>             
         </button>
     </div>
     <!-- Tabs -->
     <nav class="mdl-layout__tab-bar mdl-js-ripple-effect app-navbar">
-        <a href='#home' class="mdl-layout__tab is-active">Início</a>
-        <a href="#tool" class="mdl-layout__tab">Ferramenta</a>
-        <a href="#about" class="mdl-layout__tab">Sobre</a>
+        <a href="<?php echo (isset($msg) ? "?url=index" : "#home" ); ?>" class="mdl-layout__tab <?php echo (isset($msg) ? "" : "is-active" ); ?>">Início</a>
+        <a href="<?php echo (isset($msg) ? "?url=index" : "#tool" ); ?>" class="mdl-layout__tab">Ferramenta</a>
+        <a href="<?php echo (isset($msg) ? "?url=index" : "#about" ); ?>" class="mdl-layout__tab">Sobre</a>
     </nav>
 
     <div id="app-acoount-menu">

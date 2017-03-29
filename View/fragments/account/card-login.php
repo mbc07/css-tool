@@ -1,5 +1,3 @@
-<?php ?>
-
 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
     <div class="mdl-card__title mdl-tabs__tab-bar">
         <a href="#login" class="mdl-tabs__tab is-active">Login</a>

@@ -114,13 +114,13 @@
 
 /* Ajuste do avatar no card do usuário */
 .app-account-card-avatar {
-    width: 80px;
-    height: 80px;
     margin-right: 16px;
     align-self: baseline;
 }
 
 /* Avatar de usuário circular */
 .app-account-card-avatar > img {
+    width: 80px;
+    height: 80px;
     border-radius: 50px;
 }

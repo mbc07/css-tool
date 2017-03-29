@@ -19,7 +19,7 @@ Class FileManager {
 
             $ext = strtolower(substr($_FILES['fileUpload']['name'], -4)); //Pegando extensão do arquivo
             $new_name = $this->generatorHash($fileName) . "." . $ext; //Definindo um novo nome para o arquivo
-            $dir = '../Model/uploads/'; //Diretório para uploads
+            $dir = 'Model/uploads/'; //Diretório para uploads
 
             move_uploaded_file($_FILES['fileUpload']['tmp_name'], $dir . $new_name); //Fazer upload do arquivo
             echo '<script>location.href="?url=editor";</script>';
@@ -30,12 +30,12 @@ Class FileManager {
             fwrite($arquivo, $texto);
             fclose($arquivo);
 
-            $caminhoatual = "../Controller/";
-            $caminhodestino = "../Model/uploads/";
+            $caminhoatual = "./";
+            $caminhodestino = "Model/uploads/";
             rename($caminhoatual . $new_name, $caminhodestino . $new_name);
             echo '<script>location.href="?url=editor";</script>';
         } else {
-            echo "<script>alert('Erro de envio');</script>";
+            echo "<script>alert('Falha no upload, tente novamente');</script>";
         }
     }
 

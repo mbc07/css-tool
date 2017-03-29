@@ -15,5 +15,4 @@
     </div>
 </div>
 
-
-<?php include 'footer.php'; ?>
+<div class="app-common-footer-spacer"></div>

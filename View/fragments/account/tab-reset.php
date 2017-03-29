@@ -1,5 +1,3 @@
-<?php ?>
-
 <form class="app-account-card-reset-form" action="?url=reset" method="post">
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <input class="mdl-textfield__input" type="text" id="reset-nome" name="nome">
@@ -22,9 +20,9 @@
     <div class="app-account-card-spacer"></div>
 
     <div class="mdl-card__actions">
+        <input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent app-account-card-right-button" type="submit" value="Redefinir" name="reset">
         <button onclick="toggleLoginResetForm(); return false;" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect app-account-card-left-button">
             Voltar
         </button>
-        <input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent app-account-card-right-button" type="submit" value="Redefinir" name="reset">
     </div>
 </form>

@@ -1,13 +1,17 @@
 <div class="mdl-color--white content mdl-color-text--grey-800 mdl-cell mdl-cell--6-col">
     <h3>Bem Vindo!</h3>
     <p>Para começar, copie e cole o código HTML ou faça upload do arquivo que deseja formatar. O arquivo ficará armazenado no site, permitindo edição futura.</p>
-    <div class="app-tool-resume-editing">
+    <?php
+    clearstatcache(); 
+    if (file_exists("Model/uploads/" . md5(trim($_SESSION["id_usuario"])) . ".html")) {
+        echo '
         <p>Detectamos que você já possui um arquivo HTML armazenado no site, se preferir, poderá continuar de onde parou.<br/>
-            <button id="app-tool-resume-button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+            <button id="app-tool-resume-button" onclick="window.location = \'?url=editor\';" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
                 Iniciar a ferramenta
             </button>
-        </p>
-    </div>
+        </p>';
+    }
+    ?>
 </div>
 
 
