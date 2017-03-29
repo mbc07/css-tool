@@ -54,6 +54,9 @@ class Controller {
             case 'upload':
                 $this->upload();
                 break;
+            case 'download':
+                $this->download();
+                break;
             default:
                 require_once "View/main.php";
                 break;
@@ -213,7 +216,7 @@ class Controller {
                 $senha = md5($senha);
 
                 //realiza a função de update definida no UserFactory.php
-                $sucesso = $this->factory->update($usuario->email, $senha);
+                $sucesso = $this->factory->update($email, $senha);
 
                 //Definindo a mensagem que irá exibir dependendo do $sucesso
                 if ($sucesso) {
@@ -252,5 +255,11 @@ class Controller {
         //realiza a função de leitura de arquivo definido no FileManager.class.php
         $file->op($_SESSION["id_usuario"], 0);
     }
+
+    public function download() {
+
+        
+    }
+
 
 }
