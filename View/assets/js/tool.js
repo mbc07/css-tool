@@ -1,5 +1,6 @@
 // Arrays contendo os elementos editados
 var editedElements = [];
+var selectedElementIndex = null;
 
 
 function updateIframeMinHeight() {
@@ -30,6 +31,9 @@ function updateSelectedElement(element) {
         $('#app-editor-greeting').slideToggle(250);
         $('#app-editor-controls').slideToggle(250);
     }
+
+    if (selectedElementIndex)
+        saveEditedElement(selectedElementIndex);
 
     checkEditedElements(element);
     return;
@@ -206,7 +210,7 @@ function checkEditedElements(selector) {
     for (var i = 0; i < editedElements.length; i++)
     {
         if (editedElements[i].id == selector) {
-            saveEditedElement(i);
+            selectedElementIndex = i;
             loadElementIntoEditor(i);
             return;
         }
@@ -219,6 +223,7 @@ function checkEditedElements(selector) {
         backgroundrepeat: '', fontstyle: '', textalign: '', textdecoration: '', fontvariant: ''};
     index = editedElements.push(newElement);
 
+    selectedElementIndex = index - 1;
     loadElementIntoEditor(index - 1);
 
     return;
