@@ -19,7 +19,7 @@ Class Writer {
     {
         $this->name = $name;
         $this->element = $arrayElements;
-        $this->writeFile("Style Css Tool.\r\n");
+        $this->newFile("Style Css Tool.\r\n");
         $this->conf($this->element);
     }
 
@@ -87,6 +87,21 @@ Class Writer {
     private function writeFile($content) 
     {
         $input = fopen(__DIR__.'/file/' . $this->name . ".css", "a");
+        fwrite($input, $content);
+
+        fclose($input);
+    }
+
+
+    /**
+     * Metodo Subtitui arquivo.
+     *
+     * @param  String Do que sera gravado no arquivo.
+     *
+     */
+    private function newFile($content) 
+    {
+        $input = fopen(__DIR__.'/file/' . $this->name . ".css", "w");
         fwrite($input, $content);
 
         fclose($input);
