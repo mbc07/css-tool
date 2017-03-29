@@ -13,7 +13,9 @@
 <header class="mdl-layout__header app-navbar">
     <div class="mdl-layout__header-row">
         <!-- Title -->
-        <span class="mdl-layout-title"><?= APP_NAME ?></span>
+        <span class="mdl-layout-title">
+            <img src="View/assets/img/CSStool_wide.png" alt="<?= APP_NAME ?>">
+        </span>
         <div class="mdl-layout-spacer"></div>
         <button id="app-account-button" onclick="toggleAccountMenu(); return false;" class="mdl-button mdl-js-button mdl-button--icon app-navbar-account-button">
              <?php
