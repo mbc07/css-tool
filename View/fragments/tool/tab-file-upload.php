@@ -1,6 +1,4 @@
-<?php ?>
-
-<form action="?url=upFile" method="POST" enctype="multipart/form-data">
+<form action="?url=upload" method="POST" enctype="multipart/form-data">
     <p>Tamanho máximo do arquivo: 1024 KB</p>                
     <input type="file" id="file_upload" accept=".html" name="fileUpload">
 

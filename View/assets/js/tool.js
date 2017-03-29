@@ -133,22 +133,22 @@ function loadElementIntoEditor(element) {
     updateMDLInput($('#right'), $(element).css('right'));
     updateMDLInput($('#top'), $(element).css('top'));
     updateMDLInput($('#bottom'), $(element).css('bottom'));
-    
+
     updateMDLInput($('#width'), $(element).css('width'));
     updateMDLInput($('#height'), $(element).css('height'));
     updateMDLInput($('#min-width'), $(element).css('min-width'));
     updateMDLInput($('#min-height'), $(element).css('min-height'));
     updateMDLInput($('#max-width'), $(element).css('max-width'));
     updateMDLInput($('#max-height'), $(element).css('max-height'));
-    
+
     updateMDLInput($('#background-image'), $(element).css('background-image'));
     updateMDLInput($('#background-color'), $(element).css('background-color'));
-    
+
     updateMDLInput($('#color'), $(element).css('color'));
     updateMDLInput($('#font-family'), $(element).css('font-family'));
     updateMDLInput($('#font-size'), $(element).css('font-size'));
     updateMDLInput($('#font-weight'), $(element).css('font-weight'));
-    
+
 }
 
 function updateMDLInput(element, value) {
@@ -162,8 +162,8 @@ function updateMDLInput(element, value) {
 
 function updateMDLRadio(name, value) {
     if (value) {
-        $('[name='+name+']').find(value).addAttr('checked', true);
-        $('[name='+name+']').find(value).parent().addClass('is-checked');
+        $('[name=' + name + ']').find(value).addAttr('checked', true);
+        $('[name=' + name + ']').find(value).parent().addClass('is-checked');
     }
 
     return;

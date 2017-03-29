@@ -16,6 +16,6 @@
 <div class="app-account-card-spacer-small"></div>
 
 <div class="mdl-card__actions">
-    <a href="pageController.php?url=out"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent app-account-card-right-button">Sair
-    </button></a>
+    <a href="?url=logout"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent app-account-card-right-button">Sair
+        </button></a>
 </div>

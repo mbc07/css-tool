@@ -2,8 +2,8 @@
 
 <div class="mdl-cell mdl-cell--4-col">
     <div class="mdl-color-text--grey-800 app-tool-editor-header">
-        <button id="app-editor-back-button" class="mdl-button mdl-js-button mdl-button--icon"><a href="pageController.php?url=index">
-            <i class="material-icons">arrow_back</i></a>
+        <button id="app-editor-back-button" class="mdl-button mdl-js-button mdl-button--icon"><a href="?url=index">
+                <i class="material-icons">arrow_back</i></a>
         </button>
         <div class="mdl-tooltip" for="app-editor-back-button">
             Suas alterações<br>serão perdidas!
@@ -23,17 +23,17 @@
             </div>
             <div class="mdl-tabs__panel is-active" id="positioning">
 
-                <?php include '../View/fragments/tool/tab-editor-position.php'; ?>
+                <?php include "tab-editor-position.php"; ?>
 
             </div>
             <div class="mdl-tabs__panel" id="dimension">
-                <?php include '../View/fragments/tool/tab-editor-dimension.php'; ?>
+                <?php include "tab-editor-dimension.php"; ?>
             </div>
             <div class="mdl-tabs__panel" id="background">
-                <?php include '../View/fragments/tool/tab-editor-background.php'; ?>
+                <?php include "tab-editor-background.php"; ?>
             </div>
             <div class="mdl-tabs__panel" id="text">
-                <?php include '../View/fragments/tool/tab-editor-text.php'; ?>
+                <?php include "tab-editor-text.php"; ?>
             </div>
         </div>
     </div>
@@ -55,7 +55,7 @@
                 <iframe id="app-tool-iframe" class="app-tool-preview-iframe" ></iframe>
                 <script>
                     var hash = CryptoJS.MD5($('.app-account-card-user-details > h2').text());
-                    $('#app-tool-iframe').attr('src', '../Model/uploads/' + hash + '.html');
+                    $('#app-tool-iframe').attr('src', 'Model/uploads/' + hash + '.html');
                 </script>
 
             </div>
@@ -64,7 +64,7 @@
         <div class="mdl-card__actions mdl-card--border app-tool-preview-card-bottom">
             <div class="app-tool-preview-card-text"><p><strong>Elemento selecionado:</strong> <span id="app-selected-element-text">nenhum</span></p>
             </div>
-            <form action='../../../Controller/' method='post'>
+            <form action='?url=download' method='post'>
                 <button type='submit' id="app-tool-download-button" 
                         class="mdl-button mdl-js-button 
                         mdl-button--raised mdl-js-ripple-effect 

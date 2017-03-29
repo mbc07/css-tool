@@ -8,15 +8,15 @@
 
     <div class="mdl-card__supporting-text mdl-tabs__panel is-active" id="login">
 
-        <?php include '../View/fragments/account/tab-login.php'; ?>
+        <?php include "tab-login.php"; ?>
 
-        <?php include '../View/fragments/account/tab-reset.php'; ?>
+        <?php include "tab-reset.php"; ?>
 
     </div>
 
     <div class="mdl-card__supporting-text mdl-tabs__panel" id="register">
 
-        <?php include '../View/fragments/account/tab-register.php'; ?>
+        <?php include "tab-register.php"; ?>
 
     </div>
 </div>

@@ -1,5 +1,3 @@
-<?php ?>
-
 <div class="mdl-color--white content mdl-color-text--grey-800 mdl-cell mdl-cell--6-col">
     <h3>Bem Vindo!</h3>
     <p>Para começar, copie e cole o código HTML ou faça upload do arquivo que deseja formatar. O arquivo ficará armazenado no site, permitindo edição futura.</p>
@@ -22,13 +20,13 @@
 
         <div class="mdl-card__supporting-text mdl-tabs__panel is-active" id="text_upload">
 
-            <?php include '../View/fragments/tool/tab-text-upload.php'; ?>
+            <?php include "tab-text-upload.php"; ?>
 
         </div>
 
         <div class="mdl-card__supporting-text mdl-tabs__panel" id="file_upload">
 
-            <?php include '../View/fragments/tool/tab-file-upload.php'; ?>
+            <?php include "tab-file-upload.php"; ?>
 
         </div>
     </div>

@@ -1,4 +1,3 @@
-<?php ?>
 <div class="app-tool-editor-controls-container">
     <div class="app-tool-editor-controls-spacer"></div>
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label app-tool-editor-controls-50">

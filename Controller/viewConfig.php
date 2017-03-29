@@ -1,6 +1,6 @@
 <?php
 
-/** 
+/**
  * Definição de constantes utilizadas em páginas dinâmicas do View
  *
  * @author Mateus B. Cassiano
@@ -10,7 +10,6 @@
  * @since css-tool 2017-1
  * @link 
  */
-
 define('APP_NAME', 'CSS Tool');
 define('APP_VERSION', '1.0');
 define('APP_DEBUG_CSS', false);

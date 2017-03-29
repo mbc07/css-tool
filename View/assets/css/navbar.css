@@ -13,7 +13,7 @@
 
 /* Sobrepõe abas na linha principal da navbar */
 .app-navbar > .mdl-layout__tab-bar-container {
-    position: fixed;
+    position: absolute;
     width: 300px;
     align-self: flex-end;
     padding-right: 64px;

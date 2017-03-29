@@ -1,15 +1,13 @@
 <?php
 
-
-    /**
-     * Definindo os campos para a conexão com o datebase.    
-     */
-
+/**
+ * Definindo os campos para a conexão com o datebase.    
+ */
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 define('DB_NAME', 'csstool');
- 
+
 /**
  *
  * Classe abstrata que define o padrão para todas as fábricas.
@@ -18,7 +16,6 @@ define('DB_NAME', 'csstool');
  * @author Rodrigo Lopes - Acadêmico CC (Otimização do método queryRowsToListOfObjects)
  * @version 2.1 - 19/Dez/2016
  */
- 
 abstract class AbstractFactory {
 
     protected $db;
@@ -65,7 +62,7 @@ abstract class AbstractFactory {
      * @return  $list lista de objetos da classe $nameObject
      */
     protected function queryRowsToListOfObjects
-            (PDOStatement $result, $nameObject) {
+    (PDOStatement $result, $nameObject) {
         $list = array();
         $result = $result->fetchAll(PDO::FETCH_NUM);
         foreach ($result as $row) {

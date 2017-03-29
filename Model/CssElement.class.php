@@ -1,5 +1,6 @@
 <?php
-/** 
+
+/**
  * Element of type <CSS>.
  *
  * @author Gian Fonseca 
@@ -9,18 +10,18 @@
  * @since css-tool 2017-1
  * @link 
  */
+Class CssElement {
 
-Class CssElement
-{
-	private $name;
-	private $value;
-	private $id;
+    private $name;
+    private $value;
+    private $id;
 
-	function __construct($name, $value, $id)
-	{
-		$this->name = $name;
-		$this->value = $value;
-		$this->id = $id;
-	}
+    function __construct($name, $value, $id) {
+        $this->name = $name;
+        $this->value = $value;
+        $this->id = $id;
+    }
+
 }
+
 ?>

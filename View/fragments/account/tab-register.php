@@ -1,6 +1,6 @@
 <?php ?>
 
-<form action="?url=cad" method="post">
+<form action="?url=register" method="post">
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label app-account-card-shared-input-left">
         <input class="mdl-textfield__input" type="text" id="register-nome" name="nome">
         <label class="mdl-textfield__label" for="register-nome">Nome</label>

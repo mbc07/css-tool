@@ -16,10 +16,10 @@
 
 /* Scrollbar customizada */ 
 ::-webkit-scrollbar {
-	width: 4px;
-	height: 4px;
+    width: 4px;
+    height: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-	background: rgb(255,110,64);
+    background: rgb(255,110,64);
 }
