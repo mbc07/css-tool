@@ -1,3 +1,4 @@
+// Posiciona e dimensiona o footer de acordo com a área disponível
 var footer = '.app-common-footer';
 var footerSpacer = '.app-common-footer-spacer';
 
@@ -13,3 +14,4 @@ function updateFooterSize() {
     $(footer).css('width', $(window).width() - 32);
     $(footerSpacer).css('height', $(footer).height() + 64);
 }
+//-----------------------------------------------------------------

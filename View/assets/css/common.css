@@ -1,7 +1,10 @@
+/* Layout do card de conteúdo */
 .app-common-content-card {
     padding: 28px;
 }
 
+
+/* Classes aplicadas ao Footer */
 .app-common-footer {
     position: absolute;
     bottom: 0;
@@ -22,8 +25,10 @@
 .mdl-mini-footer__left-section > .mdl-logo {
     pointer-events: none;
 }
+/******************************/
 
-/* Scrollbar customizada */ 
+
+/* Scrollbar customizada (somente WebKit)*/
 ::-webkit-scrollbar {
     width: 4px;
     height: 4px;
@@ -32,3 +37,4 @@
 ::-webkit-scrollbar-thumb {
     background: rgb(255,110,64);
 }
+/*****************************************/
